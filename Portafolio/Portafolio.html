@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Helping - Portafolio</title>
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="../Portafolio/icon-192x192.png">
+
+  <!-- HOJA DE ESTILOS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================
+       HEADER / NAVBAR
+       ============================================ -->
+  <header class="navbar">
+    <div class="logo-container">
+      <a href="/Portafolio/Portafolio.html">
+        <img src="Logo real vectorizado.svg" alt="Helping Logo" class="logo-img">
+      </a>
+    </div>
+
+    <!-- Botón Hamburguesa para Celulares -->
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Enlaces de navegación -->
+    <nav class="nav-links" id="navMenu">
+      <a href="../inicio.html" data-i18n="navInicio">INICIO</a>
+      <a href="../Quienes somos/Quienes.html" data-i18n="navQuienesSomos">QUIÉNES SOMOS</a>
+      <a href="../Servicio/servicio.html" data-i18n="navServicio">SERVICIO</a>
+      <a href="#" class="active" data-i18n="navPortafolio">PORTAFOLIO</a>
+      <a href="../Contacto/Contacto.html" data-i18n="navContacto">CONTACTANOS</a>
+      
+      <!-- Botón Cambio de Idioma -->
+      <a href="#" id="lang-toggle" class="btn-lang-pill">🌐 <span id="lang-text">EN</span></a>
+    </nav>
+
+    <a href="../Sesion iniciada/login.html" class="btn-primary-nav desktop-btn" data-i18n="btnIniciarSesion">INICIAR SESIÓN</a>
+  </header>
+
+
+  <!-- ============================================
+       INICIO: CONTENIDO PRINCIPAL
+       ============================================ -->
+  <main>
+
+    <!-- INICIO: HERO PORTAFOLIO -->
+    <section class="portfolio-hero animate-slide-up">
+      <h1>
+        <span class="word-glow" data-i18n="hero-1">Casos</span>
+        <span class="word-glow" data-i18n="hero-2">de</span>
+        <span class="word-glow" data-i18n="hero-3">Éxito</span>
+        <span class="word-glow" data-i18n="hero-4">que</span> <br>
+        <span class="word-glow" data-i18n="hero-5">Definen</span>
+        <span class="word-glow glow-text" data-i18n="hero-6">Industrias</span>
+      </h1>
+      <p class="hero-description" data-i18n="hero-desc">
+        Una muestra seleccionada de ecosistemas digitales, marcas globales y productos interactivos desarrollados con precisión técnica y creatividad radical.
+      </p>
+    </section>
+    <!-- FIN: HERO PORTAFOLIO -->
+
+
+    <!-- INICIO: GRID DE PROYECTOS REALIZADOS -->
+    <section class="portfolio-projects-section animate-cascade-up">
+      <div class="cards-grid">
+
+        <!-- PROYECTO 1: BRANDING ALQUIMIA INTERIOR -->
+        <article class="portfolio-card home-card">
+          <div class="card-media-wrapper">
+            <video autoplay loop muted playsinline poster="../Portafolio/Alquimia Logo.jpeg">
+              <source src="../Portafolio/alquimia-interior-video.mp4" type="video/mp4">
+              Tu navegador no soporta videos.
+            </video>
+          </div>
+          <div class="card-body">
+            <span class="card-badge" data-i18n="card1Badge">BRANDING & YOUTUBE</span>
+            <h3 data-i18n="card1Title">Branding desde Cero para Canal de YouTube</h3>
+            <p class="client-subtitle"><span data-i18n="labelCliente">Cliente:</span> Alquimia Interior</p>
+            <p class="description" data-i18n="card1Desc">
+              Creación integral de la identidad visual del canal: diseño de logotipo, banner principal, paleta de colores y línea gráfica adaptada a plataformas digitales.
+            </p>
+            <div class="card-tags">
+              <span data-i18n="tagBranding">Branding</span>
+              <span>YouTube</span>
+              <span data-i18n="tagIdentidadVisual">Identidad Visual</span>
+            </div>
+            <a href="#" class="card-action btn-case-study" data-modal="modal-alquimia" data-i18n="btnVerProyecto">Ver Proyecto →</a>
+          </div>
+        </article>
+
+        <!-- PROYECTO 2: PRODUCCIÓN DE VIDEO 1 - COLEGIO EUSTAQUIO PALACIOS -->
+        <article class="portfolio-card home-card">
+          <div class="card-media-wrapper">
+            <video autoplay loop muted playsinline poster="../Portafolio/Portada Video dia de las matematicas.png">
+              <source src="../Portafolio/eustaquio-palacios-video1.mp4" type="video/mp4">
+              Tu navegador no soporta videos.
+            </video>
+          </div>
+          <div class="card-body">
+            <span class="card-badge" data-i18n="card2Badge">PRODUCCIÓN AUDIOVISUAL</span>
+            <h3 data-i18n="card2Title">Producción de Video Institucional</h3>
+            <p class="client-subtitle"><span data-i18n="labelCliente">Cliente:</span> <span data-i18n="clientEustaquio">Colegio Eustaquio Palacios</span></p>
+            <p class="description" data-i18n="card2Desc">
+              Grabación, dirección y producción audiovisual orientada al día de las matemáticas vivido en la institución.
+            </p>
+            <div class="card-tags">
+              <span data-i18n="tagProduccionVideo">Producción Video</span>
+              <span data-i18n="tagCamara">Cámara</span>
+              <span data-i18n="tagInstitucional">Institucional</span>
+            </div>
+            <a href="#" class="card-action btn-case-study" data-modal="modal-eustaquio1" data-i18n="btnVerProyecto">Ver Proyecto →</a>
+          </div>
+        </article>
+
+        <!-- PROYECTO 3: PRODUCCIÓN DE VIDEO 2 - COLEGIO EUSTAQUIO PALACIOS -->
+        <article class="portfolio-card home-card">
+          <div class="card-media-wrapper">
+            <video autoplay loop muted playsinline poster="../Portafolio/Portada Video Especialidades.png">
+              <source src="../Portafolio/eustaquio-palacios-video2.mp4" type="video/mp4">
+              Tu navegador no soporta videos.
+            </video>
+          </div>
+          <div class="card-body">
+            <span class="card-badge" data-i18n="card3Badge">PRODUCCIÓN AUDIOVISUAL</span>
+            <h3 data-i18n="card3Title">Registro & Producción de Contenido Audiovisual</h3>
+            <p class="client-subtitle"><span data-i18n="labelCliente">Cliente:</span> <span data-i18n="clientEustaquio">Colegio Eustaquio Palacios</span></p>
+            <p class="description" data-i18n="card3Desc">
+              Realización de un video enfocado en dar a conocer las diferentes especialidades al público objetivo del colegio.
+            </p>
+            <div class="card-tags">
+              <span data-i18n="tagEdicion">Edición</span>
+              <span data-i18n="tagProduccion">Producción</span>
+              <span data-i18n="tagEducativo">Educativo</span>
+            </div>
+            <a href="#" class="card-action btn-case-study" data-modal="modal-eustaquio2" data-i18n="btnVerProyecto">Ver Proyecto →</a>
+          </div>
+        </article>
+
+        <!-- PROYECTO 4: ANIMACIÓN DE LOGO - SALÓN DE BELLEZA BIP_PRO -->
+        <article class="portfolio-card home-card">
+          <div class="card-media-wrapper">
+            <video autoplay loop muted playsinline poster="../Portafolio/Logo Bip.jpeg">
+              <source src="../Portafolio/animacion-logo-bip-pro.mp4" type="video/mp4">
+              Tu navegador no soporta videos.
+            </video>
+          </div>
+          <div class="card-body">
+            <span class="card-badge" data-i18n="card4Badge">ANIMACIÓN DE LOGO</span>
+            <h3 data-i18n="card4Title">Animación de Logotipo Corporativo</h3>
+            <p class="client-subtitle"><span data-i18n="labelCliente">Cliente:</span> <span data-i18n="clientBipPro">Salón de Belleza bip_pro (Medellín)</span></p>
+            <p class="description" data-i18n="card4Desc">
+              Diseño en movimiento del logo de la marca para intros/outros de contenido digital y pantallas comerciales en sala.
+            </p>
+            <div class="card-tags">
+              <span>Motion Graphics</span>
+              <span data-i18n="tagLogoAnimado">Logo Animado</span>
+              <span>Beauty</span>
+            </div>
+            <a href="#" class="card-action btn-case-study" data-modal="modal-bippro" data-i18n="btnVerProyecto">Ver Proyecto →</a>
+          </div>
+        </article>
+
+        <!-- PROYECTO 5: ANIMACIÓN DE LOGO - COMUNA 5 MEDELLÍN -->
+        <article class="portfolio-card home-card">
+          <div class="card-media-wrapper">
+            <video autoplay loop muted playsinline poster="../Portafolio/Asociacion de comerciantes comuna 5 - copia - copia.jpeg">
+              <source src="../Portafolio/animacion-logo-comuna5.mp4" type="video/mp4">
+              Tu navegador no soporta videos.
+            </video>
+          </div>
+          <div class="card-body">
+            <span class="card-badge" data-i18n="card5Badge">ANIMACIÓN DE LOGO</span>
+            <h3 data-i18n="card5Title">Animación de Marca Política</h3>
+            <p class="client-subtitle"><span data-i18n="labelCliente">Cliente:</span> <span data-i18n="clientComuna5">Asociación de Comerciantes Comuna 5 (Medellín)</span></p>
+            <p class="description" data-i18n="card5Desc">
+              Animación de la identidad visual de la asociación para proyecciones en eventos, reuniones comerciales y material para redes sociales.
+            </p>
+            <div class="card-tags">
+              <span>Motion Design</span>
+              <span>Medellín</span>
+              <span data-i18n="tagGremial">Gremial</span>
+            </div>
+            <a href="#" class="card-action btn-case-study" data-modal="modal-comuna5" data-i18n="btnVerProyecto">Ver Proyecto →</a>
+          </div>
+        </article>
+
+        <!-- PROYECTO 6: ANIMACIÓN DE LOGO - IGLESIA JUSTICIA PAZ Y GRACIA -->
+        <article class="portfolio-card home-card">
+          <div class="card-media-wrapper">
+            <video autoplay loop muted playsinline poster="../Portafolio/Logo Iglesia.jpg">
+              <source src="../Portafolio/animacion-logo-iglesia.mp4" type="video/mp4">
+              Tu navegador no soporta videos.
+            </video>
+          </div>
+          <div class="card-body">
+            <span class="card-badge" data-i18n="card6Badge">ANIMACIÓN DE LOGO</span>
+            <h3 data-i18n="card6Title">Animación de Marca & Isotipo</h3>
+            <p class="client-subtitle"><span data-i18n="labelCliente">Cliente:</span> <span data-i18n="clientIglesia">Iglesia Justicia, Paz y Gracia (Jamundí, Valle del Cauca)</span></p>
+            <p class="description" data-i18n="card6Desc">
+              Animación gráfica del imagotipo para aperturas de transmisiones en vivo y redes oficiales.
+            </p>
+            <div class="card-tags">
+              <span>Logo 2D/3D</span>
+              <span>Jamundí</span>
+              <span>Streaming</span>
+            </div>
+            <a href="#" class="card-action btn-case-study" data-modal="modal-iglesia-logo" data-i18n="btnVerProyecto">Ver Proyecto →</a>
+          </div>
+        </article>
+
+        <!-- PROYECTO 7: EDICIÓN DE SHORTS YOUTUBE - JUSTICIA PAZ Y GRACIA -->
+        <article class="portfolio-card home-card">
+          <div class="card-media-wrapper">
+            <video autoplay loop muted playsinline poster="../Portafolio/Logo Iglesia.jpg">
+              <source src="../Portafolio/short-youtube-justicia-paz-gracia.mp4" type="video/mp4">
+              Tu navegador no soporta videos.
+            </video>
+          </div>
+          <div class="card-body">
+            <span class="card-badge" data-i18n="card7Badge">EDICIÓN & SHORTS</span>
+            <h3 data-i18n="card7Title">Edición Dinámica de Video Vertical (Shorts)</h3>
+            <p class="client-subtitle"><span data-i18n="labelCliente">Cliente:</span> <span data-i18n="clientIglesiaShorts">Canal YouTube Justicia, Paz y Gracia</span></p>
+            <p class="description" data-i18n="card7Desc">
+              Montaje de videos de alto impacto en formato vertical (YouTube Shorts / Reels), subtitulado animado y ritmo ágil para máxima retención de audiencia.
+            </p>
+            <div class="card-tags">
+              <span>YouTube Shorts</span>
+              <span data-i18n="tagEdicionVertical">Edición Vertical</span>
+              <span>CapCut / Premiere</span>
+            </div>
+            <a href="#" class="card-action btn-case-study" data-modal="modal-iglesia-shorts" data-i18n="btnVerProyecto">Ver Proyecto →</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+    <!-- FIN: GRID DE PROYECTOS REALIZADOS -->
+
+
+    <!-- INICIO: CALL TO ACTION (CTA) -->
+    <section class="cta-banner">
+      <h2>
+        <span class="word-glow" data-i18n="cta-1">¿Tienes</span>
+        <span class="word-glow" data-i18n="cta-2">un</span>
+        <span class="word-glow" data-i18n="cta-3">proyecto</span>
+        <span class="word-glow" data-i18n="cta-4">en</span>
+        <span class="word-glow glow-text" data-i18n="cta-5">mente?</span>
+      </h2>
+      <p data-i18n="cta-desc">
+        Transformamos conceptos complejos en productos digitales memorables y de alto impacto comercial.
+      </p>
+      <a href="../Contacto/Contacto.html" class="btn-cyan" data-i18n="btn-inicia">INICIA TU PROYECTO</a>
+    </section>
+    <!-- FIN: CALL TO ACTION (CTA) -->
+
+  </main>
+  <!-- ============================================
+       FIN: CONTENIDO PRINCIPAL
+       ============================================ -->
+
+
+  <!-- ============================================
+       INICIO: VENTANAS MODALES DE PROYECTOS
+       ============================================ -->
+
+  <!-- MODAL 1: ALQUIMIA INTERIOR -->
+  <div id="modal-alquimia" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Cerrar modal">&times;</button>
+      <h3 data-i18n="card1Title">Branding desde Cero para Canal de YouTube</h3>
+      <p class="client-subtitle"><span data-i18n="labelCliente">Cliente:</span> Alquimia Interior</p>
+      <div class="modal-media-wrapper">
+        <img src="../Portafolio/Alquimia Logo.jpeg" alt="Branding y Logo Alquimia Interior" class="modal-img">
+      </div>
+      <p class="modal-description">
+        <span data-i18n="card1Desc">Creación integral de la identidad visual del canal: diseño de logotipo, banner principal, paleta de colores y línea gráfica adaptada a plataformas digitales.</span>
+        <br><br>
+        <strong data-i18n="labelVerYouTube">Ver en YouTube:</strong>
+        <a href="https://www.youtube.com/@Alquimiainteriorespiritual" target="_blank" rel="noopener noreferrer" class="modal-link">
+          www.youtube.com/@Alquimiainteriorespiritual
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <!-- MODAL 2: EUSTAQUIO PALACIOS 1 -->
+  <div id="modal-eustaquio1" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Cerrar modal">&times;</button>
+      <h3 data-i18n="card2Title">Producción de Video Institucional</h3>
+      <p class="client-subtitle"><span data-i18n="labelCliente">Cliente:</span> <span data-i18n="clientEustaquio">Colegio Eustaquio Palacios</span></p>
+      <div class="modal-video-wrapper">
+        <video controls playsinline poster="../Portafolio/Portada Video dia de las matematicas.png">
+          <source src="../Portafolio/Video Matematicas Helping.mp4" type="video/mp4">
+          Tu navegador no soporta videos.
+        </video>
+      </div>
+      <p class="modal-description" data-i18n="card2Desc">
+        Grabación, dirección y producción audiovisual orientada al día de las matemáticas vivido en la institución.
+      </p>
+    </div>
+  </div>
+
+  <!-- MODAL 3: EUSTAQUIO PALACIOS 2 -->
+  <div id="modal-eustaquio2" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Cerrar modal">&times;</button>
+      <h3 data-i18n="card3Title">Registro & Producción de Contenido Audiovisual</h3>
+      <p class="client-subtitle"><span data-i18n="labelCliente">Cliente:</span> <span data-i18n="clientEustaquio">Colegio Eustaquio Palacios</span></p>
+      <div class="modal-video-wrapper">
+        <video controls playsinline poster="../Portafolio/Portada Video Especialidades.png">
+          <source src="../Portafolio/Video Eustaquio Especialidades.mp4" type="video/mp4">
+          Tu navegador no soporta videos.
+        </video>
+      </div>
+      <p class="modal-description" data-i18n="card3Desc">
+        Realización de un video enfocado en dar a conocer las diferentes especialidades al público objetivo del colegio.
+      </p>
+    </div>
+  </div>
+
+  <!-- MODAL 4: BIP PRO -->
+  <div id="modal-bippro" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Cerrar modal">&times;</button>
+      <h3 data-i18n="card4Title">Animación de Logotipo Corporativo</h3>
+      <p class="client-subtitle"><span data-i18n="labelCliente">Cliente:</span> <span data-i18n="clientBipPro">Salón de Belleza bip_pro</span></p>
+      <div class="modal-video-wrapper">
+        <video controls playsinline poster="../Portafolio/Logo Bip.jpeg">
+          <source src="../Portafolio/Animacion Logo Bip V2.mp4" type="video/mp4">
+          Tu navegador no soporta videos.
+        </video>
+      </div>
+      <p class="modal-description" data-i18n="modal4Desc">
+        Diseño en movimiento del logo de la marca para intros/outros de contenido digital y pantallas comerciales en sala en formato vertical.
+      </p>
+      <strong data-i18n="labelVerInstagram">Ver en Instagram:</strong>
+      <a href="https://www.instagram.com/bip_pro/" target="_blank" rel="noopener noreferrer" class="modal-link">
+        https://www.instagram.com/bip_pro/
+      </a>
+    </div>
+  </div>
+
+  <!-- MODAL 5: COMUNA 5 -->
+  <div id="modal-comuna5" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Cerrar modal">&times;</button>
+      <h3 data-i18n="card5Title">Animación de Marca Política</h3>
+      <p class="client-subtitle"><span data-i18n="labelCliente">Cliente:</span> <span data-i18n="clientComuna5">Asociación de Comerciantes Comuna 5 (Medellín)</span></p>
+      <div class="modal-video-wrapper">
+        <video controls playsinline poster="../Portafolio/Asociacion de comerciantes comuna 5 - copia - copia.jpeg">
+          <source src="../Portafolio/Animacion Logo Asociacion de comerciantes comuna 5 Formato vertical.mp4" type="video/mp4">
+          Tu navegador no soporta videos.
+        </video>
+      </div>
+      <p class="modal-description" data-i18n="card5Desc">
+        Animación de la identidad visual de la asociación para proyecciones en eventos, reuniones comerciales y material para redes sociales.
+      </p>
+    </div>
+  </div>
+
+  <!-- MODAL 6: IGLESIA LOGO -->
+  <div id="modal-iglesia-logo" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Cerrar modal">&times;</button>
+      <h3 data-i18n="card6Title">Animación de Marca & Isotipo</h3>
+      <p class="client-subtitle"><span data-i18n="labelCliente">Cliente:</span> <span data-i18n="clientIglesia">Iglesia Justicia, Paz y Gracia (Jamundí, Valle del Cauca)</span></p>
+      <div class="modal-video-wrapper">
+        <video controls playsinline poster="../Portafolio/Logo Iglesia.jpg">
+          <source src="../Portafolio/Animacion Pastor.mp4" type="video/mp4">
+          Tu navegador no soporta videos.
+        </video>
+      </div>
+      <p class="modal-description" data-i18n="card6Desc">
+        Animación gráfica del imagotipo para aperturas de transmisiones en vivo y redes oficiales.
+      </p>
+      <strong data-i18n="labelVerYouTube">Ver en YouTube:</strong>
+      <a href="https://www.youtube.com/@JusticiaPazYGracia" target="_blank" rel="noopener noreferrer" class="modal-link">
+        www.youtube.com/@JusticiaPazYGracia
+      </a>
+    </div>
+  </div>
+
+  <!-- MODAL 7: IGLESIA SHORTS -->
+  <div id="modal-iglesia-shorts" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Cerrar modal">&times;</button>
+      <h3 data-i18n="card7Title">Edición Dinámica de Video Vertical (Shorts)</h3>
+      <p class="client-subtitle"><span data-i18n="labelCliente">Cliente:</span> <span data-i18n="clientIglesiaShorts">Canal YouTube Justicia, Paz y Gracia</span></p>
+      <div class="modal-video-wrapper">
+        <video controls playsinline poster="../Portafolio/Logo Iglesia.jpg">
+          <source src="../Portafolio/Video Short Pastor.mp4" type="video/mp4">
+          Tu navegador no soporta videos.
+        </video>
+      </div>
+      <p class="modal-description" data-i18n="card7Desc">
+        Montaje de videos de alto impacto en formato vertical (YouTube Shorts / Reels), subtitulado animado y ritmo ágil para máxima retención de audiencia.
+      </p>
+      <strong data-i18n="labelVerYouTube">Ver en YouTube:</strong>
+      <a href="https://www.youtube.com/@JusticiaPazYGracia" target="_blank" rel="noopener noreferrer" class="modal-link">
+        www.youtube.com/@JusticiaPazYGracia
+      </a>
+    </div>
+  </div>
+  <!-- ============================================
+       FIN: VENTANAS MODALES DE PROYECTOS
+       ============================================ -->
+
+
+  <!-- ============================================
+       INICIO: FOOTER / PIE DE PÁGINA
+       ============================================ -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      
+      <!-- Columna 1: Marca y Logo -->
+      <div class="footer-col footer-col-brand">
+        <p class="footer-brand-title">Helping</p>
+
+        <div class="footer-logo-anchor">
+          <a href="inicio.html" class="footer-logo-pop">
+            <img src="Logo real vectorizado.svg" alt="Helping Logo">
+          </a>
+        </div>
+
+        <p class="footer-brand-desc" data-i18n="footerBrandDesc">
+          Agencia de diseño visual, branding e identidades digitales enfocadas en potenciar marcas.
+        </p>
+        <p class="footer-copyright">&copy; 2026 Helping. <span data-i18n="footerCopyright">Todos los derechos reservados.</span></p>
+      </div>
+
+      <!-- Columna 2: Navegación -->
+      <div class="footer-col">
+        <h4 class="footer-col-title" data-i18n="footerNavTitle">Navegación</h4>
+        <ul class="footer-menu">
+          <li><a href="../inicio.html" data-i18n="navInicio">Inicio</a></li>
+          <li><a href="../Quienes somos/Quienes.html" data-i18n="navQuienesSomos">Quienes somos</a></li>
+          <li><a href="../Servicio/servicio.html" data-i18n="navServicio">Servicios</a></li>
+          <li><a href="../Portafolio/Portafolio.html" data-i18n="navPortafolio">Portafolio</a></li>
+          <li><a href="../Contacto/Contacto.html" data-i18n="navContacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Columna 3: Legales -->
+      <div class="footer-col">
+        <h4 class="footer-col-title" data-i18n="footerLegalesTitle">Legales</h4>
+        <ul class="footer-menu">
+          <li><a href="../Privacidad/privacidad.html" data-i18n="politicaPrivacidad">Política de Privacidad</a></li>
+        </ul>
+      </div>
+
+      <!-- Columna 4: Redes -->
+      <div class="footer-col">
+        <h4 class="footer-col-title" data-i18n="footerConectaTitle">Conecta</h4>
+        <ul class="footer-menu">
+          <li><a href="https://www.instagram.com/somoshelping/" target="_blank" rel="noopener">INSTAGRAM</a></li>
+          <li><a href="https://www.linkedin.com/in/martin-lora-garrido-6b4b09430/" target="_blank" rel="noopener">LINKEDIN</a></li>
+          <li><a href="https://wa.me/3152289258" target="_blank" rel="noopener">WHATSAPP</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ============================================
+       INICIO: SCRIPTS JAVASCRIPT (TRADUCCIÓN Y MODALES)
+       ============================================ -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      /* ----------------------------------------------------
+         1. DICCIONARIO DE TRADUCCIONES (ES / EN)
+         ---------------------------------------------------- */
+      const translations = {
+        es: {
+          // Navbar
+          "navInicio": "INICIO",
+          "navQuienesSomos": "QUIÉNES SOMOS",
+          "navServicio": "SERVICIOS",
+          "navPortafolio": "PORTAFOLIO",
+          "navContacto": "CONTÁCTANOS",
+          "btnIniciarSesion": "INICIAR SESIÓN",
+          "langBtn": "EN",
+
+          // Hero
+          "hero-1": "Casos",
+          "hero-2": "de",
+          "hero-3": "Éxito",
+          "hero-4": "que",
+          "hero-5": "Definen",
+          "hero-6": "Industrias",
+          "hero-desc": "Una muestra seleccionada de ecosistemas digitales, marcas globales y productos interactivos desarrollados con precisión técnica y creatividad radical.",
+
+          // General Tarjetas
+          "labelCliente": "Cliente:",
+          "btnVerProyecto": "Ver Proyecto →",
+          "labelVerYouTube": "Ver en YouTube:",
+          "labelVerInstagram": "Ver en Instagram:",
+
+          // Tags comunes
+          "tagBranding": "Branding",
+          "tagIdentidadVisual": "Identidad Visual",
+          "tagProduccionVideo": "Producción Video",
+          "tagCamara": "Cámara",
+          "tagInstitucional": "Institucional",
+          "tagEdicion": "Edición",
+          "tagProduccion": "Producción",
+          "tagEducativo": "Educativo",
+          "tagLogoAnimado": "Logo Animado",
+          "tagGremial": "Gremial",
+          "tagEdicionVertical": "Edición Vertical",
+
+          // Proyecto 1
+          "card1Badge": "BRANDING & YOUTUBE",
+          "card1Title": "Branding desde Cero para Canal de YouTube",
+          "card1Desc": "Creación integral de la identidad visual del canal: diseño de logotipo, banner principal, paleta de colores y línea gráfica adaptada a plataformas digitales.",
+
+          // Proyecto 2
+          "card2Badge": "PRODUCCIÓN AUDIOVISUAL",
+          "card2Title": "Producción de Video Institucional",
+          "clientEustaquio": "Colegio Eustaquio Palacios",
+          "card2Desc": "Grabación, dirección y producción audiovisual orientada al día de las matemáticas vivido en la institución.",
+
+          // Proyecto 3
+          "card3Badge": "PRODUCCIÓN AUDIOVISUAL",
+          "card3Title": "Registro & Producción de Contenido Audiovisual",
+          "card3Desc": "Realización de un video enfocado en dar a conocer las diferentes especialidades al público objetivo del colegio.",
+
+          // Proyecto 4
+          "card4Badge": "ANIMACIÓN DE LOGO",
+          "card4Title": "Animación de Logotipo Corporativo",
+          "clientBipPro": "Salón de Belleza bip_pro (Medellín)",
+          "card4Desc": "Diseño en movimiento del logo de la marca para intros/outros de contenido digital y pantallas comerciales en sala.",
+          "modal4Desc": "Diseño en movimiento del logo de la marca para intros/outros de contenido digital y pantallas comerciales en sala en formato vertical.",
+
+          // Proyecto 5
+          "card5Badge": "ANIMACIÓN DE LOGO",
+          "card5Title": "Animación de Marca Política",
+          "clientComuna5": "Asociación de Comerciantes Comuna 5 (Medellín)",
+          "card5Desc": "Animación de la identidad visual de la asociación para proyecciones en eventos, reuniones comerciales y material para redes sociales.",
+
+          // Proyecto 6
+          "card6Badge": "ANIMACIÓN DE LOGO",
+          "card6Title": "Animación de Marca & Isotipo",
+          "clientIglesia": "Iglesia Justicia, Paz y Gracia (Jamundí, Valle del Cauca)",
+          "card6Desc": "Animación gráfica del imagotipo para aperturas de transmisiones en vivo y redes oficiales.",
+
+          // Proyecto 7
+          "card7Badge": "EDICIÓN & SHORTS",
+          "card7Title": "Edición Dinámica de Video Vertical (Shorts)",
+          "clientIglesiaShorts": "Canal YouTube Justicia, Paz y Gracia",
+          "card7Desc": "Montaje de videos de alto impacto en formato vertical (YouTube Shorts / Reels), subtitulado animado y ritmo ágil para máxima retención de audiencia.",
+
+          // CTA
+          "cta-1": "¿Tienes",
+          "cta-2": "un",
+          "cta-3": "proyecto",
+          "cta-4": "en",
+          "cta-5": "mente?",
+          "cta-desc": "Transformamos conceptos complejos en productos digitales memorables y de alto impacto comercial.",
+          "btn-inicia": "INICIA TU PROYECTO",
+
+          // Footer
+          "footerBrandDesc": "Agencia de diseño visual, branding e identidades digitales enfocadas en potenciar marcas.",
+          "footerCopyright": "Todos los derechos reservados.",
+          "footerNavTitle": "Navegación",
+          "footerLegalesTitle": "Legales",
+          "politicaPrivacidad": "Política de Privacidad",
+          "footerConectaTitle": "Conecta"
+        },
+        en: {
+          // Navbar
+          "navInicio": "HOME",
+          "navQuienesSomos": "ABOUT US",
+          "navServicio": "SERVICES",
+          "navPortafolio": "PORTFOLIO",
+          "navContacto": "CONTACT US",
+          "btnIniciarSesion": "LOG IN",
+          "langBtn": "ES",
+
+          // Hero
+          "hero-1": "Success",
+          "hero-2": "Cases",
+          "hero-3": "That",
+          "hero-4": "Define",
+          "hero-5": "Entire",
+          "hero-6": "Industries",
+          "hero-desc": "A curated selection of digital ecosystems, global brands, and interactive products crafted with technical precision and radical creativity.",
+
+          // General Tarjetas
+          "labelCliente": "Client:",
+          "btnVerProyecto": "View Project →",
+          "labelVerYouTube": "Watch on YouTube:",
+          "labelVerInstagram": "Watch on Instagram:",
+
+          // Tags comunes
+          "tagBranding": "Branding",
+          "tagIdentidadVisual": "Visual Identity",
+          "tagProduccionVideo": "Video Production",
+          "tagCamara": "Camera Work",
+          "tagInstitucional": "Corporate",
+          "tagEdicion": "Editing",
+          "tagProduccion": "Production",
+          "tagEducativo": "Educational",
+          "tagLogoAnimado": "Animated Logo",
+          "tagGremial": "Association",
+          "tagEdicionVertical": "Vertical Editing",
+
+          // Proyecto 1
+          "card1Badge": "BRANDING & YOUTUBE",
+          "card1Title": "From-Scratch Branding for YouTube Channel",
+          "card1Desc": "Comprehensive creation of the channel's visual identity: logo design, main banner, color palette, and graphic line tailored for digital platforms.",
+
+          // Proyecto 2
+          "card2Badge": "AUDIOVISUAL PRODUCTION",
+          "card2Title": "Institutional Video Production",
+          "clientEustaquio": "Eustaquio Palacios School",
+          "card2Desc": "Filming, direction, and audiovisual production centered around the Math Day celebrated at the institution.",
+
+          // Proyecto 3
+          "card3Badge": "AUDIOVISUAL PRODUCTION",
+          "card3Title": "Audiovisual Content Recording & Production",
+          "card3Desc": "Creation of a promotional video focused on showcasing the school's different academic specialties to target audiences.",
+
+          // Proyecto 4
+          "card4Badge": "LOGO ANIMATION",
+          "card4Title": "Corporate Logo Animation",
+          "clientBipPro": "bip_pro Beauty Salon (Medellín)",
+          "card4Desc": "Motion design of the brand logo for digital content intros/outros and in-salon commercial displays.",
+          "modal4Desc": "Motion design of the brand logo for digital content intros/outros and in-salon commercial displays in vertical format.",
+
+          // Proyecto 5
+          "card5Badge": "LOGO ANIMATION",
+          "card5Title": "Political Brand Animation",
+          "clientComuna5": "Comuna 5 Merchants Association (Medellín)",
+          "card5Desc": "Visual identity animation for projections at events, commercial meetings, and social media material.",
+
+          // Proyecto 6
+          "card6Badge": "LOGO ANIMATION",
+          "card6Title": "Brand & Isotype Animation",
+          "clientIglesia": "Justicia, Paz y Gracia Church (Jamundí, Colombia)",
+          "card6Desc": "Graphic logo animation for live stream openings and official social media channels.",
+
+          // Proyecto 7
+          "card7Badge": "EDITING & SHORTS",
+          "card7Title": "Dynamic Vertical Video Editing (Shorts)",
+          "clientIglesiaShorts": "Justicia, Paz y Gracia YouTube Channel",
+          "card7Desc": "High-impact vertical video editing (YouTube Shorts / Reels) featuring animated subtitles and dynamic pacing for maximum audience retention.",
+
+          // CTA
+          "cta-1": "Do",
+          "cta-2": "you",
+          "cta-3": "have a",
+          "cta-4": "project in",
+          "cta-5": "mind?",
+          "cta-desc": "We transform complex concepts into memorable digital products with high commercial impact.",
+          "btn-inicia": "START YOUR PROJECT",
+
+          // Footer
+          "footerBrandDesc": "Visual design, branding, and digital identity agency focused on empowering brands.",
+          "footerCopyright": "All rights reserved.",
+          "footerNavTitle": "Navigation",
+          "footerLegalesTitle": "Legal",
+          "politicaPrivacidad": "Privacy Policy",
+          "footerConectaTitle": "Connect"
+        }
+      };
+
+      /* ----------------------------------------------------
+         2. LÓGICA DEL BOTÓN DE IDIOMA
+         ---------------------------------------------------- */
+      let currentLang = localStorage.getItem('helping_lang') || 'es';
+      const langBtn = document.getElementById("lang-toggle");
+      const langText = document.getElementById("lang-text");
+
+      function updateLanguageUI(lang) {
+        // Actualizar la etiqueta del botón (EN u ES)
+        if (langText && translations[lang]) {
+          langText.textContent = translations[lang].langBtn;
+        }
+
+        // Traducir todos los elementos marcados con data-i18n de forma segura
+        document.querySelectorAll("[data-i18n]").forEach(element => {
+          const key = element.getAttribute("data-i18n");
+          if (translations[lang] && translations[lang][key] !== undefined) {
+            element.textContent = translations[lang][key];
+          }
+        });
+
+        localStorage.setItem('helping_lang', lang);
+      }
+
+      // Aplicar al cargar la página
+      updateLanguageUI(currentLang);
+
+      // Evento de clic en el botón de idioma
+      if (langBtn) {
+        langBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          currentLang = currentLang === "es" ? "en" : "es";
+          updateLanguageUI(currentLang);
+        });
+      }
+
+      /* ----------------------------------------------------
+         3. LÓGICA DE APERTURA Y CIERRE DE MODALES
+         ---------------------------------------------------- */
+      document.addEventListener('click', (e) => {
+        const btn = e.target.closest('.btn-case-study');
+        
+        // Abrir Modal
+        if (btn) {
+          e.preventDefault();
+          const modalId = btn.getAttribute('data-modal');
+          const targetModal = document.getElementById(modalId);
+          
+          if (targetModal) {
+            targetModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            const video = targetModal.querySelector('video');
+            if (video) {
+              video.currentTime = 0;
+              video.play().catch(() => {});
+            }
+          }
+        }
+
+        // Cerrar Modal con botón X o fondo
+        if (e.target.classList.contains('modal-close') || e.target.classList.contains('modal-overlay')) {
+          const activeModal = document.querySelector('.modal-overlay.active');
+          if (activeModal) {
+            activeModal.classList.remove('active');
+            document.body.style.overflow = '';
+            const video = activeModal.querySelector('video');
+            if (video) video.pause();
+          }
+        }
+      });
+
+      // Cerrar Modal con tecla Escape
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          const activeModal = document.querySelector('.modal-overlay.active');
+          if (activeModal) {
+            activeModal.classList.remove('active');
+            document.body.style.overflow = '';
+            const video = activeModal.querySelector('video');
+            if (video) video.pause();
+          }
+        }
+      });
+
+    });
+  </script>
+  <!-- ============================================
+       FIN: SCRIPTS JAVASCRIPT
+       ============================================ -->
+
+</body>
+</html>
