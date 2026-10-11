@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Helping - Inicio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="icon-192x192.png">
+
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================
+       HEADER / NAVBAR
+       ============================================ -->
+  <header class="navbar">
+    <div class="logo-container">
+      <a href="inicio.html">
+        <img src="Logo real vectorizado.svg" alt="Helping Logo" class="logo-img">
+      </a>
+    </div>
+
+    <!-- Botón Hamburguesa para Celulares -->
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Enlaces de navegación -->
+    <nav class="nav-links" id="navMenu">
+      <a href="#" class="active" data-i18n="navInicio">INICIO</a>
+      <a href="./Quienes somos/Quienes.html" data-i18n="navQuienesSomos">QUIÉNES SOMOS</a>
+      <a href="./Servicio/servicio.html" data-i18n="navServicio">SERVICIO</a>
+      <a href="./Portafolio/Portafolio.html" data-i18n="navPortafolio">PORTAFOLIO</a>
+      <a href="./Contacto/Contacto.html" data-i18n="navContacto">CONTACTANOS</a>
+      
+      <!-- Botón Cambio de Idioma -->
+<a href="#" id="lang-toggle" class="btn-lang-pill">🌐 EN</a>
+
+      
+    </nav>
+
+    <a href="./Sesion iniciada/login.html" class="btn-primary-nav desktop-btn" data-i18n="btnIniciarSesion">INICIAR SESIÓN</a>
+  </header>
+
+
+  <!-- ============================================
+      INICIO: SECCIÓN HERO
+      ============================================ -->
+  <section class="hero">
+    <div class="tag">HELPING</div>
+    
+    <h1>
+      <span id="typing-text"></span><span class="cursor">|</span>
+    </h1>
+
+    <p class="hero-desc" data-i18n="heroDesc">
+      Fusionamos tecnología de vanguardia y creatividad humana para construir experiencias digitales que definen industrias y emocionan usuarios.
+    </p>
+
+    <!-- Botón de acción Hero (CTA) -->
+    <a href="./Portafolio/Portafolio.html" class="btn-primary" data-i18n="btnHero">
+      EXPLORA NUESTRO PORTAFOLIO
+    </a>
+  </section>
+  <!-- === TERMINA: SECCIÓN HERO === -->
+
+
+  <!-- ============================================
+      INICIO: SECCIÓN PORTAFOLIO (PROYECTOS)
+      ============================================ -->
+  <section class="projects-section zoom-element">
+    <div class="projects-header">
+      <div>
+        <h2>
+          <span data-i18n="pTitle1">Diseño</span> <span data-i18n="pTitle2">visual</span><br>
+          <span data-i18n="pTitle3">que</span> <span class="neon-text" data-i18n="pTitle4">potencia</span> <span data-i18n="pTitle5">tu</span> <span data-i18n="pTitle6">negocio</span>
+        </h2>
+        <p></p>
+      </div>
+      <a href="./Servicio/servicio.html" class="link-all" data-i18n="linkVerTodo">VER TODO</a>
+    </div>
+
+    <div class="cards-grid">
+      
+      <!-- TARJETA 1 (BRANDING DIGITAL) -->
+      <div class="portfolio-card zoom-element">
+        <div class="card-preview">
+          <img src="./Foto Branding Digital.jpg" alt="Vista previa Branding Digital">
+        </div>
+
+        <div class="card-body">
+          <div class="client-header">
+            <div class="client-info">
+              <h3 data-i18n="card1Title">Branding Digital</h3>
+              <p data-i18n="card1Sub">Posicionamiento Digital</p>
+            </div>
+          </div>
+          <p class="description" data-i18n="card1Desc">
+            Estrategia visual y conceptual diseñada para ubicar a la marca en el lugar preferente de la mente del consumidor.
+          </p>
+          <a href="#" class="btn-case-study" data-modal="modal-branding" data-i18n="btnSaberMas">Saber más ✨</a>
+        </div>
+      </div>
+
+      <!-- TARJETA 2 (IDENTIDAD VISUAL) -->
+      <div class="portfolio-card zoom-element">
+        <div class="card-preview">
+          <img src="./Foto identidad visual.jpg" alt="Vista previa Identidad Visual">
+        </div>
+
+        <div class="card-body">
+          <div class="client-header">
+            <div class="client-info">
+              <h3 data-i18n="card2Title">Identidad visual</h3>
+              <p data-i18n="card2Sub">Personalidad gráfica</p>
+            </div>
+          </div>
+          <p class="description" data-i18n="card2Desc">
+            Universo estético e intencional creado para proyectar el carácter único del negocio y su público objetivo.
+          </p>
+          <a href="#" class="btn-case-study" data-modal="modal-identidad" data-i18n="btnSaberMas">Saber más ✨</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- === TERMINA: SECCIÓN PORTAFOLIO === -->
+
+
+  <!-- ============================================
+      INICIO: MODALES DE PROYECTOS
+      ============================================ -->
+
+  <!-- MODAL PROYECTO 1 (BRANDING DIGITAL) -->
+  <div id="modal-branding" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      
+      <div class="modal-header">
+        <span class="badge" data-i18n="m1Badge">Estrategia & Marca</span>
+        <h2 data-i18n="card1Title">Branding Digital</h2>
+        <p class="modal-subtitle" data-i18n="m1Sub">Posicionamiento conceptual y visual estratégico.</p>
+      </div>
+
+      <div class="modal-tags">
+        <span data-i18n="m1Tag1">Estrategia</span>
+        <span data-i18n="m1Tag2">Identidad</span>
+        <span data-i18n="m1Tag3">Posicionamiento</span>
+      </div>
+
+      <div class="modal-features">
+        <div class="feature-card">
+          <h4 data-i18n="m1F1Title">Enfoque</h4>
+          <p data-i18n="m1F1Text">Preferencia de marca</p>
+        </div>
+        <div class="feature-card">
+          <h4 data-i18n="m1F2Title">Alcance</h4>
+          <p data-i18n="m1F2Text">Diferenciación competitiva</p>
+        </div>
+      </div>
+
+      <div class="modal-preview-text">
+        <p data-i18n="m1Text">Diseño y gestión de marcas memorables: logotipo, universo visual y propuesta de valor diferenciadora.</p>
+      </div>
+
+      <a href="./Contacto/Contacto.html" class="btn-modal-cta">
+        <span class="btn-main-text" data-i18n="btnQuieroProyecto">Quiero mi proyecto ↗</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- MODAL PROYECTO 2 (IDENTIDAD VISUAL) -->
+  <div id="modal-identidad" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      
+      <div class="modal-header">
+        <span class="badge" data-i18n="m2Badge">Diseño de Marca</span>
+        <h2 data-i18n="card2Title">Identidad Visual</h2>
+        <p class="modal-subtitle" data-i18n="m2Sub">Universo estético e intencional para marcas únicas.</p>
+      </div>
+
+      <div class="modal-tags">
+        <span data-i18n="m2Tag1">Diseño de logo</span>
+        <span data-i18n="m2Tag2">Sistema Visual</span>
+        <span data-i18n="m2Tag3">Paleta & Tipografía</span>
+      </div>
+
+      <div class="modal-features">
+        <div class="feature-card">
+          <h4 data-i18n="m2F1Title">Carácter</h4>
+          <p data-i18n="m2F1Text">Proyección de marca</p>
+        </div>
+        <div class="feature-card">
+          <h4 data-i18n="m2F2Title">Impacto</h4>
+          <p data-i18n="m2F2Text">Reconocimiento duradero</p>
+        </div>
+      </div>
+
+      <div class="modal-preview-text">
+        <p data-i18n="m2Text">Creación de sistemas gráficos coherentes: paleta tipográfica, elementos de marca y manuales estéticos para un impacto perdurable.</p>
+      </div>
+
+      <a href="./Contacto/Contacto.html" class="btn-modal-cta">
+        <span class="btn-main-text" data-i18n="btnQuieroProyecto">Quiero mi proyecto ↗</span>
+      </a>
+    </div>  
+  </div>
+
+
+  <!-- ============================================
+     INICIO: FOOTER / PIE DE PÁGINA
+     ============================================ -->
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <!-- Columna 1: Marca y Logo -->
+    <div class="footer-col footer-col-brand">
+      <p class="footer-brand-title">Helping</p>
+
+      <div class="footer-logo-anchor">
+        <a href="inicio.html" class="footer-logo-pop">
+          <img src="Logo real vectorizado.svg" alt="Helping Logo">
+        </a>
+      </div>
+
+      <p class="footer-brand-desc" data-i18n="footerBrandDesc">
+        Agencia de diseño visual, branding e identidades digitales enfocadas en potenciar marcas.
+      </p>
+      <p class="footer-copyright">&copy; 2026 Helping. <span data-i18n="footerCopyright">Todos los derechos reservados.</span></p>
+    </div>
+
+    <!-- Columna 2: Navegación -->
+    <div class="footer-col">
+      <h4 class="footer-col-title" data-i18n="footerNavTitle">Navegación</h4>
+      <ul class="footer-menu">
+        <li><a href="./inicio.html" data-i18n="navInicio">Inicio</a></li>
+        <li><a href="./Quienes somos/Quienes.html" data-i18n="navQuienesSomos">Quienes somos</a></li>
+        <li><a href="./Servicio/servicio.html" data-i18n="navServicio">Servicios</a></li>
+        <li><a href="./Portafolio/Portafolio.html" data-i18n="navPortafolio">Portafolio</a></li>
+        <li><a href="./Contacto/Contacto.html" data-i18n="navContacto">Contacto</a></li>
+      </ul>
+    </div>
+
+    <!-- Columna 3: Legales -->
+    <div class="footer-col">
+      <h4 class="footer-col-title" data-i18n="footerLegalesTitle">Legales</h4>
+      <ul class="footer-menu">
+        <li><a href="./Privacidad/privacidad.html" data-i18n="politicaPrivacidad">Política de Privacidad</a></li>
+      </ul>
+    </div>
+
+    <!-- Columna 4: Redes -->
+    <div class="footer-col">
+      <h4 class="footer-col-title" data-i18n="footerConectaTitle">Conecta</h4>
+      <ul class="footer-menu">
+        <li><a href="https://www.instagram.com/somoshelping/" target="_blank" rel="noopener">INSTAGRAM</a></li>
+        <li><a href="https://www.linkedin.com/in/martin-lora-garrido-6b4b09430/" target="_blank" rel="noopener">LINKEDIN</a></li>
+        <li><a href="https://wa.me/3152289258" target="_blank" rel="noopener">WHATSAPP</a></li>
+      </ul>
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- ============================================
+     INICIO: SCRIPTS Y LÓGICA JAVASCRIPT GLOBAL
+     ============================================ -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+
+    /* ----------------------------------------------------
+       1. DICCIONARIO COMPLETO DE IDIOMAS (ES / EN)
+       ---------------------------------------------------- */
+    const translations = {
+      es: {
+        langBtn: "EN",
+        navInicio: "INICIO",
+        navQuienesSomos: "QUIÉNES SOMOS",
+        navServicio: "SERVICIOS",
+        navPortafolio: "PORTAFOLIO",
+        navContacto: "CONTÁCTANOS",
+        btnIniciarSesion: "INICIAR SESIÓN",
+        typingText: "CREAMOS LA IDENTIDAD<br>DE TU MARCA",
+        highlightWord: "TU",
+        heroDesc: "Fusionamos tecnología de vanguardia y creatividad humana para construir experiencias digitales que definen industrias y emocionan usuarios.",
+        btnHero: "EXPLORA NUESTRO PORTAFOLIO",
+        pTitle1: "Diseño", pTitle2: "visual", pTitle3: "que", pTitle4: "potencia", pTitle5: "tu", pTitle6: "negocio",
+        linkVerTodo: "VER TODO",
+        card1Title: "Branding Digital", card1Sub: "Posicionamiento Digital",
+        card1Desc: "Estrategia visual y conceptual diseñada para ubicar a la marca en el lugar preferente de la mente del consumidor.",
+        card2Title: "Identidad visual", card2Sub: "Personalidad gráfica",
+        card2Desc: "Universo estético e intencional creado para proyectar el carácter único del negocio y su público objetivo.",
+        btnSaberMas: "Saber más ✨",
+        m1Badge: "Estrategia & Marca", m1Sub: "Posicionamiento conceptual y visual estratégico.",
+        m1Tag1: "Estrategia", m1Tag2: "Identidad", m1Tag3: "Posicionamiento",
+        m1F1Title: "Enfoque", m1F1Text: "Preferencia de marca",
+        m1F2Title: "Alcance", m1F2Text: "Diferenciación competitiva",
+        m1Text: "Diseño y gestión de marcas memorables: logotipo, universo visual y propuesta de valor diferenciadora.",
+        m2Badge: "Diseño de Marca", m2Sub: "Universo estético e intencional para marcas únicas.",
+        m2Tag1: "Diseño de logo", m2Tag2: "Sistema Visual", m2Tag3: "Paleta & Tipografía",
+        m2F1Title: "Carácter", m2F1Text: "Proyección de marca",
+        m2F2Title: "Impacto", m2F2Text: "Reconocimiento duradero",
+        m2Text: "Creación de sistemas gráficos coherentes: paleta tipográfica, elementos de marca y manuales estéticos para un impacto perdurable.",
+        btnQuieroProyecto: "Quiero mi proyecto ↗",
+        footerBrandDesc: "Agencia de diseño visual, branding e identidades digitales enfocadas en potenciar marcas.",
+        footerCopyright: "Todos los derechos reservados.",
+        footerNavTitle: "Navegación", footerLegalesTitle: "Legales", footerConectaTitle: "Conecta",
+       
+      },
+      en: {
+        langBtn: "ES",
+        navInicio: "HOME",
+        navQuienesSomos: "ABOUT US",
+        navServicio: "SERVICES",
+        navPortafolio: "PORTFOLIO",
+        navContacto: "CONTACT US",
+        btnIniciarSesion: "LOG IN",
+        typingText: "WE CREATE YOUR BRAND <br> IDENTITY",
+        highlightWord: "YOUR",
+        heroDesc: "We fuse cutting-edge technology and human creativity to build digital experiences that define industries and excite users.",
+        btnHero: "EXPLORE OUR PORTFOLIO",
+        pTitle1: "Visual", pTitle2: "design", pTitle3: "that", pTitle4: "empowers", pTitle5: "your", pTitle6: "business",
+        linkVerTodo: "SEE ALL",
+        card1Title: "Digital Branding", card1Sub: "Digital Positioning",
+        card1Desc: "Visual and conceptual strategy designed to place the brand at the top of the consumer's mind.",
+        card2Title: "Visual Identity", card2Sub: "Graphic Personality",
+        card2Desc: "Aesthetic and intentional universe created to project the unique character of the business.",
+        btnSaberMas: "Learn more ✨",
+        m1Badge: "Strategy & Brand", m1Sub: "Strategic conceptual and visual positioning.",
+        m1Tag1: "Strategy", m1Tag2: "Identity", m1Tag3: "Positioning",
+        m1F1Title: "Focus", m1F1Text: "Brand Preference",
+        m1F2Title: "Scope", m1F2Text: "Competitive Differentiation",
+        m1Text: "Design and management of memorable brands: logo, visual universe, and differentiating value proposal.",
+        m2Badge: "Brand Design", m2Sub: "Aesthetic and intentional universe for unique brands.",
+        m2Tag1: "Logo Design", m2Tag2: "Visual System", m2Tag3: "Palette & Typography",
+        m2F1Title: "Character", m2F1Text: "Brand Projection",
+        m2F2Title: "Impact", m2F2Text: "Lasting Recognition",
+        m2Text: "Creation of coherent graphic systems: typographic palette, brand elements, and aesthetic guidelines.",
+        btnQuieroProyecto: "I want my project ↗",
+        footerBrandDesc: "Visual design, branding, and digital identity agency focused on boosting brands.",
+        footerCopyright: "All rights reserved.",
+        footerNavTitle: "Navigation", footerLegalesTitle: "Legal", footerConectaTitle: "Connect",
+        politicaPrivacidad: "Privacy Policy"
+      }
+    };
+
+    let currentLang = localStorage.getItem('helping_lang') || 'es';
+    let typeWriterTimeout = null;
+
+
+    /* ----------------------------------------------------
+       2. MENÚ RESPONSIVE (HAMBURGUESA)
+       ---------------------------------------------------- */
+    const navToggle = document.getElementById('navToggle') || document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('navMenu') || document.getElementById('nav-links');
+
+    if (navToggle && navMenu) {
+      navToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navToggle.classList.toggle('open');
+        navToggle.classList.toggle('is-active');
+        navMenu.classList.toggle('active');
+      });
+
+      const menuLinks = navMenu.querySelectorAll('a');
+      menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          navToggle.classList.remove('open', 'is-active');
+          navMenu.classList.remove('active');
+        });
+      });
+    }
+
+
+    /* ----------------------------------------------------
+       3. MÁQUINA DE ESCRIBIR DINÁMICA CON GLOW
+       ---------------------------------------------------- */
+    function runTypeWriter(text, highlightWord) {
+      const typingElement = document.getElementById("typing-text");
+      if (!typingElement) return;
+
+      clearTimeout(typeWriterTimeout);
+      typingElement.innerHTML = "";
+
+      let index = 0;
+      const speed = 70;
+      const startGlow = text.indexOf(highlightWord);
+      const endGlow = startGlow + highlightWord.length;
+
+      function typeWriter() {
+        if (index < text.length) {
+          if (text.substring(index, index + 4) === "<br>") {
+            typingElement.innerHTML += "<br>";
+            index += 4;
+          } else {
+            let char = text.charAt(index);
+            let formattedChar = "";
+
+            if (char === " ") {
+              formattedChar = "&nbsp;";
+            } else if (startGlow !== -1 && index >= startGlow && index < endGlow) {
+              formattedChar = `<span class="glow-text">${char}</span>`;
+            } else {
+              formattedChar = `<span>${char}</span>`;
+            }
+
+            typingElement.innerHTML += formattedChar;
+            index++;
+          }
+          typeWriterTimeout = setTimeout(typeWriter, speed);
+        } else {
+          let lines = text.split("<br>");
+          let formattedLines = lines.map(line => {
+            return line.trim().split(" ").map(word => {
+              if (word === highlightWord) {
+                return `<span class="word-glow glow-text">${word}</span>`;
+              } else {
+                return `<span class="word-glow">${word}</span>`;
+              }
+            }).join(" ");
+          });
+
+          typingElement.innerHTML = formattedLines.join("<br>");
+        }
+      }
+
+      typeWriter();
+    }
+
+
+    /* ----------------------------------------------------
+       4. SISTEMA Y ACCIÓN DE CAMBIO DE IDIOMA (i18n)
+       ---------------------------------------------------- */
+    const langBtn = document.getElementById("lang-toggle");
+    const langText = document.getElementById("lang-text");
+
+    function updateLanguageUI(lang) {
+      if (langText) {
+        langText.textContent = translations[lang].langBtn;
+      } else if (langBtn) {
+        langBtn.textContent = `🌐 ${translations[lang].langBtn}`;
+      }
+
+      document.querySelectorAll("[data-i18n]").forEach(element => {
+        const key = element.getAttribute("data-i18n");
+        if (translations[lang] && translations[lang][key]) {
+          element.textContent = translations[lang][key];
+        }
+      });
+
+      runTypeWriter(translations[lang].typingText, translations[lang].highlightWord);
+      localStorage.setItem('helping_lang', lang);
+    }
+
+    // Ejecución inicial del idioma guardado
+    updateLanguageUI(currentLang);
+
+    if (langBtn) {
+      langBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        currentLang = currentLang === "es" ? "en" : "es";
+        updateLanguageUI(currentLang);
+      });
+    }
+
+
+    /* ----------------------------------------------------
+       5. CONTROLADOR DE MODALES
+       ---------------------------------------------------- */
+    const openButtons = document.querySelectorAll('.btn-case-study');
+    const closeButtons = document.querySelectorAll('.modal-close');
+    const modals = document.querySelectorAll('.modal-overlay');
+
+    openButtons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        const modalId = button.getAttribute('data-modal');
+        const targetModal = document.getElementById(modalId);
+        if (targetModal) targetModal.classList.add('active');
+      });
+    });
+
+    closeButtons.forEach(closeBtn => {
+      closeBtn.addEventListener('click', () => {
+        const modal = closeBtn.closest('.modal-overlay');
+        if (modal) modal.classList.remove('active');
+      });
+    });
+
+    modals.forEach(modal => {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.classList.remove('active');
+      });
+    });
+
+
+    /* ----------------------------------------------------
+       6. ANIMACIÓN ZOOM SCROLL
+       ---------------------------------------------------- */
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.zoom-element').forEach((el) => observer.observe(el));
+
+  });
+</script>
+
+</body>
+</html>

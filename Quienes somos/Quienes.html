@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiénes Somos - Helping</title>
+  
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="../Quienes somos/icon-192x192.png">
+
+  <!-- ESTILOS CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================
+       INICIO: HEADER / NAVBAR
+       ============================================ -->
+  <header class="navbar">
+    <!-- Logo de marca -->
+    <div class="logo-container">
+      <a href="./Quienes.html" class="logo">
+        <img src="../Quienes somos/Logo real vectorizado.svg" alt="Helping Logo" class="logo-img">
+      </a>
+    </div>
+
+    <!-- Botón Hamburguesa Móvil -->
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" type="button">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Menú de Navegación -->
+    <nav class="nav-links" id="navMenu">
+      <a href="../inicio.html" data-i18n="navInicio">INICIO</a>
+      <a href="#" class="active" data-i18n="navQuienesSomos">QUIÉNES SOMOS</a>
+      <a href="../Servicio/servicio.html" data-i18n="navServicio">SERVICIO</a>
+      <a href="../Portafolio/Portafolio.html" data-i18n="navPortafolio">PORTAFOLIO</a>
+      <a href="../Contacto/Contacto.html" data-i18n="navContacto">CONTACTO</a>
+      
+      <!-- Botón Cambio de Idioma (con id="lang-text" interno) -->
+      <a href="#" id="lang-toggle" class="btn-lang-pill">🌐 <span id="lang-text">EN</span></a>
+
+      <!-- Botón Iniciar Sesión para Móvil -->
+      <a href="../Inicio de sesion/Sesion.html" class="btn-primary-nav mobile-btn" data-i18n="navLogin">INICIAR SESIÓN</a>
+    </nav>
+
+    <!-- Botón Iniciar Sesión para Escritorio -->
+    <a href="../Inicio de sesion/Sesion.html" class="btn-primary-nav desktop-btn" data-i18n="navLogin">INICIAR SESIÓN</a>
+  </header>
+  <!-- === FIN: HEADER / NAVBAR === -->
+
+
+  <!-- ============================================
+       INICIO: CONTENIDO PRINCIPAL
+       ============================================ -->
+  <main>
+
+    <!-- HERO QUIÉNES SOMOS -->
+    <section class="services-hero">
+      <h1>
+        <span class="word-glow" data-i18n="aboutHeroTitle1">Transformamos</span>
+        <span class="word-glow" data-i18n="aboutHeroTitle2">negocios</span> <br>
+        <span class="word-glow cyan-highlight" data-i18n="aboutHeroTitle3">en marcas</span>
+        <span class="word-glow" data-i18n="aboutHeroTitle4">memorables.</span>
+      </h1>
+      <p class="hero-text" data-i18n="aboutHeroDesc">
+        Impulsamos a emprendedores y negocios emergentes con soluciones estratégicas de diseño y tecnología, proyectando una imagen sólida y profesional hacia el futuro.
+      </p>
+    </section>
+
+    <div class="video-container-wrapper">
+      <div class="video-frame-container">
+        <video controls autoplay muted loop playsinline class="promo-video">
+          <source src="../Portafolio/Video animacion helping.mp4" type="video/mp4">
+          Tu navegador no soporta la reproducción de video.
+        </video>
+      </div>
+    </div>
+
+    <!-- FUNDADOR / LIDERAZGO -->
+    <section class="projects-section zoom-element">
+      <div class="cards-grid founder-grid">
+        
+        <article class="portfolio-card zoom-element">
+          <div class="card-preview founder-card-preview">
+            <img src="../Quienes somos/Foto Hoja de vida.png" alt="Fundador y Director Ejecutivo de Helping">
+          </div>
+        </article>
+
+        <div class="card-body founder-body">
+          <div class="client-header">
+            <div class="client-info">
+              <h3 class="founder-title">Martin Lora Garrido</h3>
+              <p class="neon-text founder-role" data-i18n="founderRole">Fundador & Gerente</p>
+            </div>
+          </div>
+          <p class="description founder-quote" data-i18n="founderQuote">
+            Detrás de Helping está el compromiso irrenunciable con la excelencia visual y la profesionalización de cada marca. Construimos la identidad estratégica y la presencia digital que tu negocio necesita para competir con los grandes.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RESEÑA HISTÓRICA -->
+    <section class="projects-section zoom-element">
+      <div class="projects-header">
+        <div>
+          <h2>
+            <span data-i18n="historyTitle1">Nuestra</span> 
+            <span class="neon-text" data-i18n="historyTitle2">Historia</span>
+          </h2>
+        </div>
+      </div>
+
+      <article class="portfolio-card zoom-element">
+        <div class="card-body padding-large">
+          <p class="description history-text" data-i18n="historyDesc">
+            Helping nace como una iniciativa que surge de un proyecto enfocado en construir un futuro sólido y competitivo dentro del mercado del diseño. Es una agencia emergente impulsada por la visión de ofrecer soluciones visuales creativas y profesionales. Al ser una marca en pleno crecimiento, se encuentra en la etapa de definir su estructura comercial, portafolio y herramientas estratégicas para salir a captar sus primeros clientes formales.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <!-- MISIÓN Y VISIÓN -->
+    <section class="projects-section zoom-element">
+      <div class="projects-header">
+        <div>
+          <h2>
+            <span data-i18n="essenceTitle1">Nuestra</span> 
+            <span class="neon-text" data-i18n="essenceTitle2">Esencia</span><br>
+            <span data-i18n="essenceTitle3">Estratégica</span>
+          </h2>
+        </div>
+      </div>
+
+      <div class="cards-grid">
+        
+        <!-- TARJETA: MISIÓN -->
+        <article class="portfolio-card zoom-element">
+          <div class="card-body">
+            <div class="client-header">
+              <div class="client-info">
+                <h3 data-i18n="missionTitle">Misión</h3>
+                <p data-i18n="missionSubtitle">Nuestro Propósito</p>
+              </div>
+            </div>
+            <p class="description" data-i18n="missionDesc">
+              Profesionalizar la imagen de negocios emergentes. A través de la creación de logotipos, producción audiovisual, gestión de redes sociales y diseño de material publicitario (como menús y promociones), buscamos impulsar el posicionamiento estratégico y el crecimiento sostenible de nuestros clientes.
+            </p>
+          </div>
+        </article>
+
+        <!-- TARJETA: VISIÓN -->
+        <article class="portfolio-card zoom-element">
+          <div class="card-body">
+            <div class="client-header">
+              <div class="client-info">
+                <h3 data-i18n="visionTitle">Visión</h3>
+                <p data-i18n="visionSubtitle">Nuestra Proyección</p>
+              </div>
+            </div>
+            <p class="description" data-i18n="visionDesc">
+              Para el año 2030, ser una agencia líder en la profesionalización de la imagen y comunicación de negocios emergentes en el Valle del Cauca, reconocida por impulsar el crecimiento y posicionamiento estratégico de nuestros clientes mediante soluciones creativas en diseño, producción audiovisual, gestión de redes sociales y material publicitario.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- VALORES CORPORATIVOS -->
+    <section class="projects-section zoom-element">
+      <div class="projects-header">
+        <div>
+          <h2>
+            <span data-i18n="valuesTitle1">Valores</span> 
+            <span class="neon-text" data-i18n="valuesTitle2">Corporativos</span>
+          </h2>
+        </div>
+      </div>
+
+      <div class="cards-grid">
+        
+        <!-- VALOR 1 -->
+        <article class="portfolio-card zoom-element">
+          <div class="card-body">
+            <div class="client-header">
+              <div class="client-info">
+                <h3 class="neon-text" data-i18n="val1Title">Excelencia Visual</h3>
+                <p data-i18n="val1Subtitle">Estándar de Calidad</p>
+              </div>
+            </div>
+            <p class="description" data-i18n="val1Desc">
+              Nos enfocamos en entregar piezas de alto impacto estético y técnico, garantizando que cada identidad visual refleje profesionalismo y solidez desde el primer vistazo.
+            </p>
+          </div>
+        </article>
+
+        <!-- VALOR 2 -->
+        <article class="portfolio-card zoom-element">
+          <div class="card-body">
+            <div class="client-header">
+              <div class="client-info">
+                <h3 class="neon-text" data-i18n="val2Title">Empatía Emprendedora</h3>
+                <p data-i18n="val2Subtitle">Conexión Real</p>
+              </div>
+            </div>
+            <p class="description" data-i18n="val2Desc">
+              Entendemos de primera mano los desafíos de construir y hacer crecer una marca, acompañando a cada cliente con soluciones cercanas y adaptadas a su realidad.
+            </p>
+          </div>
+        </article>
+
+        <!-- VALOR 3 -->
+        <article class="portfolio-card zoom-element">
+          <div class="card-body">
+            <div class="client-header">
+              <div class="client-info">
+                <h3 class="neon-text" data-i18n="val3Title">Integridad Creativa</h3>
+                <p data-i18n="val3Subtitle">Transparencia y Ética</p>
+              </div>
+            </div>
+            <p class="description" data-i18n="val3Desc">
+              Trabajamos con honestidad, autenticidad y un compromiso firme hacia el desarrollo de propuestas genuinas que potencien el valor estratégico de cada proyecto.
+            </p>
+          </div>
+        </article>
+
+        <!-- VALOR 4 -->
+        <article class="portfolio-card zoom-element">
+          <div class="card-body">
+            <div class="client-header">
+              <div class="client-info">
+                <h3 class="neon-text" data-i18n="val4Title">Adaptabilidad</h3>
+                <p data-i18n="val4Subtitle">Evolución Continua</p>
+              </div>
+            </div>
+            <p class="description" data-i18n="val4Desc">
+              Nos ajustamos a las exigencias cambiantes del mercado y a las necesidades específicas de cada marca en su proceso de estructuración y escala comercial.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+  <!-- === FIN: CONTENIDO PRINCIPAL === -->
+
+
+  <!-- ============================================
+       INICIO: FOOTER / PIE DE PÁGINA
+       ============================================ -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      
+      <!-- Columna 1: Marca y Logo -->
+      <div class="footer-col footer-col-brand">
+        <p class="footer-brand-title">Helping</p>
+
+        <div class="footer-logo-anchor">
+          <a href="./Quienes.html" class="footer-logo-pop">
+            <img src="../Quienes somos/Logo real vectorizado.svg" alt="Helping Logo">
+          </a>
+        </div>
+
+        <p class="footer-brand-desc" data-i18n="footerBrandDesc">
+          Agencia de diseño visual, branding e identidades digitales enfocadas en potenciar marcas.
+        </p>
+        <p class="footer-copyright">&copy; 2026 Helping. <span data-i18n="footerCopyright">Todos los derechos reservados.</span></p>
+      </div>
+
+      <!-- Columna 2: Navegación -->
+      <div class="footer-col">
+        <h4 class="footer-col-title" data-i18n="footerNavTitle">Navegación</h4>
+        <ul class="footer-menu">
+          <li><a href="../inicio.html" data-i18n="navInicio">Inicio</a></li>
+          <li><a href="./Quienes.html" data-i18n="navQuienesSomos">Quienes somos</a></li>
+          <li><a href="../Servicio/servicio.html" data-i18n="navServicio">Servicios</a></li>
+          <li><a href="../Portafolio/Portafolio.html" data-i18n="navPortafolio">Portafolio</a></li>
+          <li><a href="../Contacto/Contacto.html" data-i18n="navContacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Columna 3: Legales -->
+      <div class="footer-col">
+        <h4 class="footer-col-title" data-i18n="footerLegalesTitle">Legales</h4>
+        <ul class="footer-menu">
+          <li><a href="../Privacidad/privacidad.html" data-i18n="politicaPrivacidad">Política de Privacidad</a></li>
+        </ul>
+      </div>
+
+      <!-- Columna 4: Redes -->
+      <div class="footer-col">
+        <h4 class="footer-col-title" data-i18n="footerConectaTitle">Conecta</h4>
+        <ul class="footer-menu">
+          <li><a href="https://www.instagram.com/somoshelping/" target="_blank" rel="noopener">INSTAGRAM</a></li>
+          <li><a href="https://www.linkedin.com/in/martin-lora-garrido-6b4b09430/" target="_blank" rel="noopener">LINKEDIN</a></li>
+          <li><a href="https://wa.me/3152289258" target="_blank" rel="noopener">WHATSAPP</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+  <!-- === FIN: FOOTER === -->
+
+
+  <!-- ============================================
+        INICIO: JAVASCRIPT FUNCIONAL
+        ============================================ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      /* 1. CONTROL DEL MENÚ HAMBURGUESA MÓVIL */
+      const navToggle = document.getElementById('navToggle');
+      const navMenu = document.getElementById('navMenu');
+
+      if (navToggle && navMenu) {
+        navToggle.addEventListener('click', (e) => {
+          e.stopPropagation();
+          navToggle.classList.toggle('open');
+          navMenu.classList.toggle('active');
+        });
+      }
+
+      const links = navMenu ? navMenu.querySelectorAll('a') : [];
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          if (navToggle && navMenu) {
+            navToggle.classList.remove('open');
+            navMenu.classList.remove('active');
+          }
+        });
+      });
+
+      /* 2. DICCIONARIO DE TRADUCCIÓN (ES / EN) */
+      const translations = {
+        es: {
+          langBtn: "EN",
+          navInicio: "INICIO",
+          navQuienesSomos: "QUIÉNES SOMOS",
+          navServicio: "SERVICIOS",
+          navPortafolio: "PORTAFOLIO",
+          navContacto: "CONTÁCTANOS",
+          navLogin: "INICIAR SESIÓN",
+          aboutHeroTitle1: "Transformamos",
+          aboutHeroTitle2: "negocios",
+          aboutHeroTitle3: "en marcas",
+          aboutHeroTitle4: "memorables.",
+          aboutHeroDesc: "Impulsamos a emprendedores y negocios emergentes con soluciones estratégicas de diseño y tecnología, proyectando una imagen sólida y profesional hacia el futuro.",
+          founderRole: "Fundador & Gerente",
+          founderQuote: "\"Detrás de Helping está el compromiso irrenunciable con la excelencia visual y la profesionalización de cada marca. Construimos la identidad estratégica y la presencia digital que tu negocio necesita para competir con los grandes.\"",
+          historyTitle1: "Nuestra",
+          historyTitle2: "Historia",
+          historyDesc: "Helping nace como una iniciativa que surge de un proyecto enfocado en construir un futuro sólido y competitivo dentro del mercado del diseño. Es una agencia emergente impulsada por la visión de ofrecer soluciones visuales creativas y profesionales. Al ser una marca en pleno crecimiento, se encuentra en la etapa de definir su estructura comercial, portafolio y herramientas estratégicas para salir a captar sus primeros clientes formales.",
+          essenceTitle1: "Nuestra",
+          essenceTitle2: "Esencia",
+          essenceTitle3: "Estratégica",
+          missionTitle: "Misión",
+          missionSubtitle: "Nuestro Propósito",
+          missionDesc: "Profesionalizar la imagen de negocios emergentes. A través de la creación de logotipos, producción audiovisual, gestión de redes sociales y diseño de material publicitario (como menús y promociones), buscamos impulsar el posicionamiento estratégico y el crecimiento sostenible de nuestros clientes.",
+          visionTitle: "Visión",
+          visionSubtitle: "Nuestra Proyección",
+          visionDesc: "Para el año 2030, ser una agencia líder en la profesionalización de la imagen y comunicación de negocios emergentes en el Valle del Cauca, reconocida por impulsar el crecimiento y posicionamiento estratégico de nuestros clientes mediante soluciones creativas en diseño, producción audiovisual, gestión de redes sociales y material publicitario.",
+          valuesTitle1: "Valores",
+          valuesTitle2: "Corporativos",
+          val1Title: "Excelencia Visual",
+          val1Subtitle: "Estándar de Calidad",
+          val1Desc: "Nos enfocamos en entregar piezas de alto impacto estético y técnico, garantizando que cada identidad visual refleje profesionalismo y solidez desde el primer vistazo.",
+          val2Title: "Empatía Emprendedora",
+          val2Subtitle: "Conexión Real",
+          val2Desc: "Entendemos de primera mano los desafíos de construir y hacer crecer una marca, acompañando a cada cliente con soluciones cercanas y adaptadas a su realidad.",
+          val3Title: "Integridad Creativa",
+          val3Subtitle: "Transparencia y Ética",
+          val3Desc: "Trabajamos con honestidad, autenticidad y un compromiso firme hacia el desarrollo de propuestas genuinas que potencien el valor estratégico de cada proyecto.",
+          val4Title: "Adaptabilidad",
+          val4Subtitle: "Evolución Continua",
+          val4Desc: "Nos ajustamos a las exigencias cambiantes del mercado y a las necesidades específicas de cada marca en su proceso de estructuración y escala comercial.",
+          footerBrandDesc: "Agencia de diseño visual, branding e identidades digitales enfocadas en potenciar marcas.",
+          footerCopyright: "Todos los derechos reservados.",
+          footerNavTitle: "Navegación",
+          footerLegalesTitle: "Legales",
+          footerConectaTitle: "Conecta",
+          politicaPrivacidad: "Política de Privacidad"
+        },
+        en: {
+          langBtn: "ES",
+          navInicio: "HOME",
+          navQuienesSomos: "ABOUT US",
+          navServicio: "SERVICES",
+          navPortafolio: "PORTFOLIO",
+          navContacto: "CONTACT",
+          navLogin: "LOG IN",
+          aboutHeroTitle1: "We transform",
+          aboutHeroTitle2: "businesses",
+          aboutHeroTitle3: "into memorable",
+          aboutHeroTitle4: "brands.",
+          aboutHeroDesc: "We empower entrepreneurs and emerging businesses with strategic design and tech solutions, projecting a solid, professional image into the future.",
+          founderRole: "Founder & Manager",
+          founderQuote: "\"Behind Helping lies an unwavering commitment to visual excellence and brand professionalization. We build the strategic identity and digital presence your business needs to compete with industry leaders.\"",
+          historyTitle1: "Our",
+          historyTitle2: "Story",
+          historyDesc: "Helping was born as an initiative from a project focused on building a strong, competitive future in the design market. As an emerging agency driven by creative and professional visual solutions, it is actively building its commercial structure and portfolio to engage its first formal clients.",
+          essenceTitle1: "Our Strategic",
+          essenceTitle2: "Essence",
+          essenceTitle3: "",
+          missionTitle: "Mission",
+          missionSubtitle: "Our Purpose",
+          missionDesc: "To professionalize the image of emerging businesses through logo creation, audiovisual production, social media management, and promotional marketing materials, driving strategic positioning and sustainable growth.",
+          visionTitle: "Vision",
+          visionSubtitle: "Our Projection",
+          visionDesc: "By 2030, to become a leading agency in brand professionalization and communication for emerging businesses in Valle del Cauca, recognized for driving client growth through high-impact creative solutions.",
+          valuesTitle1: "Corporate",
+          valuesTitle2: "Values",
+          val1Title: "Visual Excellence",
+          val1Subtitle: "Quality Standard",
+          val1Desc: "We focus on delivering high-impact aesthetic and technical assets, ensuring every visual identity radiates solid professionalism.",
+          val2Title: "Entrepreneurial Empathy",
+          val2Subtitle: "Real Connection",
+          val2Desc: "We understand the firsthand challenges of building and scaling a brand, supporting each client with tailored, realistic solutions.",
+          val3Title: "Creative Integrity",
+          val3Subtitle: "Ethics & Transparency",
+          val3Desc: "We work with honesty, authenticity, and a firm commitment to authentic design solutions that enhance strategic brand value.",
+          val4Title: "Adaptability",
+          val4Subtitle: "Continuous Evolution",
+          val4Desc: "We adapt to changing market demands and the specific needs of each brand throughout its commercial growth.",
+          footerBrandDesc: "Visual design agency, branding, and digital identities focused on empowering brands.",
+          footerCopyright: "All rights reserved.",
+          footerNavTitle: "Navigation",
+          footerLegalesTitle: "Legal",
+          footerConectaTitle: "Connect",
+          politicaPrivacidad: "Privacy Policy"
+        }
+      };
+
+      /* 3. LÓGICA DE TRADUCCIÓN CON PERSISTENCIA */
+      let currentLang = localStorage.getItem('helping_lang') || 'es';
+      const langToggleBtn = document.getElementById('lang-toggle');
+      const langTextSpan = document.getElementById('lang-text');
+
+      function applyLanguage(lang) {
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+          const key = element.getAttribute('data-i18n');
+          if (translations[lang] && translations[lang][key] !== undefined) {
+            element.textContent = translations[lang][key];
+          }
+        });
+
+        if (langTextSpan && translations[lang]) {
+          langTextSpan.textContent = translations[lang].langBtn;
+        }
+
+        localStorage.setItem('helping_lang', lang);
+      }
+
+      applyLanguage(currentLang);
+
+      if (langToggleBtn) {
+        langToggleBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          currentLang = currentLang === 'es' ? 'en' : 'es';
+          applyLanguage(currentLang);
+        });
+      }
+    });
+  </script>
+</body>
+</html>

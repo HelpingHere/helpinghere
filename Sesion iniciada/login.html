@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="metaTitle">Helping - Inicio de Sesión</title>
+
+
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../icon-192x192.png">
+
+  <!-- Hoja de estilos CSS externa -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Estilos de transición para alternar las vistas SPA */
+    .view-section {
+      display: none;
+      width: 100%;
+    }
+
+    .view-section.active {
+      display: block;
+    }
+
+    #error-msg {
+      display: none;
+      color: #ff4a4a;
+      background: rgba(255, 74, 74, 0.1);
+      border: 1px solid rgba(255, 74, 74, 0.3);
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================
+       HEADER / NAVBAR
+       ============================================ -->
+  <header class="navbar">
+    <div class="logo-container">
+      <a href="../inicio.html">
+        <img src="Logo real vectorizado.svg" alt="Helping Logo" class="logo-img">
+      </a>
+    </div>
+
+    <!-- Botón Hamburguesa para Celulares -->
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Enlaces de navegación -->
+    <nav class="nav-links" id="navMenu">
+      <a href="../inicio.html" data-i18n="navInicio">INICIO</a>
+      <a href="../Quienes somos/Quienes.html" data-i18n="navQuienesSomos">QUIÉNES SOMOS</a>
+      <a href="../Servicio/servicio.html" data-i18n="navServicio">SERVICIO</a>
+      <a href="../Portafolio/Portafolio.html" data-i18n="navPortafolio">PORTAFOLIO</a>
+      <a href="../Contacto/Contacto.html" data-i18n="navContacto">CONTACTO</a>
+      
+      <!-- Botón Cambio de Idioma -->
+      <a href="#" id="lang-toggle" class="btn-lang-pill">🌐 EN</a>
+    </nav>
+
+    <!-- Botón de Acción Dinámico (Iniciar / Cerrar Sesión) -->
+    <a href="#" id="btn-session-action" class="btn-primary-nav desktop-btn" data-i18n="btnIniciarSesion">INICIAR SESIÓN</a>
+  </header>
+
+
+  <!-- ============================================
+       VISTA 1: FORMULARIO DE INICIO DE SESIÓN
+       ============================================ -->
+  <section id="login-view" class="view-section active">
+    <main class="login-container">
+      <div class="login-box">
+        
+        <div class="login-header">
+          <h2>
+            <span data-i18n="loginTitle1">Bienvenido</span> 
+            <span class="highlight" data-i18n="loginTitle2">de nuevo</span>
+          </h2>
+          <p data-i18n="loginSubtitle">Ingresa tus credenciales para acceder a tu panel.</p>
+        </div>
+
+        <!-- Mensaje de Error -->
+        <div id="error-msg" data-i18n="errorMsg">❌ Credenciales incorrectas. Intenta con admin@helping.com o usuario@helping.com</div>
+
+        <form id="login-form">
+          <div class="form-group">
+            <label for="email" data-i18n="labelEmail">EMAIL CORPORATIVO</label>
+            <div class="input-wrapper">
+              <i data-lucide="mail"></i>
+              <input type="email" id="email" placeholder="usuario@helping.com" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password" data-i18n="labelPassword">CONTRASEÑA</label>
+            <div class="input-wrapper">
+              <i data-lucide="lock"></i>
+              <input type="password" id="password" placeholder="••••••••" required>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <a href="#" class="forgot-pass" data-i18n="forgotPass">¿Olvidaste tu contraseña?</a>
+          </div>
+
+          <button type="submit" class="btn-submit" data-i18n="btnSubmit">INICIAR SESIÓN</button>
+        </form>
+
+      </div>
+    </main>
+  </section>
+
+
+  <!-- ============================================
+       VISTA 2: PANEL DE USUARIO (DASHBOARD)
+       ============================================ -->
+  <section id="panel-view" class="view-section">
+    <main class="user-panel-container">
+      
+      <!-- Banner de bienvenida con Email -->
+      <div class="user-welcome-header">
+        <div>
+          <h1 data-i18n="panelTitle">¡Hola de nuevo!</h1>
+          <p><span data-i18n="panelSubtitle">Sesión iniciada con:</span> <span id="user-email-display" class="user-email-text"></span></p>
+        </div>
+      </div>
+
+      <!-- Módulos del Panel de Usuario -->
+      <div class="user-grid">
+        
+        <div class="user-card">
+          <div>
+            <h3 data-i18n="card1Title">Proyectos Activos</h3>
+            <p data-i18n="card1Desc">Consulta el avance y estado de tus proyectos de diseño y branding actual.</p>
+          </div>
+          <span class="status-badge" data-i18n="card1Badge">2 En Progreso</span>
+        </div>
+
+        <div class="user-card">
+          <div>
+            <h3 data-i18n="card2Title">Servicios Contratados</h3>
+            <p data-i18n="card2Desc">Revisa la lista de servicios activos y los detalles de tu suscripción.</p>
+          </div>
+          <span class="status-badge" data-i18n="card2Badge">Activo</span>
+        </div>
+
+        <div class="user-card">
+          <div>
+            <h3 data-i18n="card3Title">Soporte Técnico</h3>
+            <p data-i18n="card3Desc">Contacta directamente con nuestro equipo de diseño para cambios o dudas.</p>
+          </div>
+          <span class="status-badge" data-i18n="card3Badge">Disponible</span>
+        </div>
+
+      </div>
+
+    </main>
+  </section>
+
+
+  <!-- ============================================
+       FOOTER / PIE DE PÁGINA
+       ============================================ -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      
+      <!-- Columna 1: Marca y Logo -->
+      <div class="footer-col footer-col-brand">
+        <p class="footer-brand-title">Helping</p>
+
+        <div class="footer-logo-anchor">
+          <a href="../inicio.html" class="footer-logo-pop">
+            <img src="Logo real vectorizado.svg" alt="Helping Logo">
+          </a>
+        </div>
+
+        <p class="footer-brand-desc" data-i18n="footerBrandDesc">
+          Agencia de diseño visual, branding e identidades digitales enfocadas en potenciar marcas.
+        </p>
+        <p class="footer-copyright">&copy; 2026 Helping. <span data-i18n="footerCopyright">Todos los derechos reservados.</span></p>
+      </div>
+
+      <!-- Columna 2: Navegación -->
+      <div class="footer-col">
+        <h4 class="footer-col-title" data-i18n="footerNavTitle">Navegación</h4>
+        <ul class="footer-menu">
+          <li><a href="../inicio.html" data-i18n="navInicio">Inicio</a></li>
+          <li><a href="../Servicio/servicio.html" data-i18n="navServicio">Servicios</a></li>
+          <li><a href="../Portafolio/Portafolio.html" data-i18n="navPortafolio">Portafolio</a></li>
+          <li><a href="../Contacto/Contacto.html" data-i18n="navContacto">Contacto</a></li>
+        </ul>
+      </div>
+
+    
+
+      <!-- Columna 4: Redes -->
+      <div class="footer-col">
+        <h4 class="footer-col-title" data-i18n="footerConectaTitle">Conecta</h4>
+        <ul class="footer-menu">
+          <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://behance.net" target="_blank" rel="noopener">Behance</a></li>
+          <li><a href="https://wa.me/" target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ============================================
+       JAVASCRIPT COMPLETO CON TRADUCCIÓN OPERATIVA
+       ============================================ -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      /* 1. ÍCONOS LUCIDE */
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+
+      /* 2. MENÚ HAMBURGUESA MÓVIL */
+      const navToggle = document.getElementById('navToggle');
+      const navMenu = document.getElementById('navMenu');
+
+      if (navToggle && navMenu) {
+        navToggle.addEventListener('click', () => {
+          navMenu.classList.toggle('active');
+          navToggle.classList.toggle('active');
+        });
+      }
+
+      /* 3. CREDENCIALES VÁLIDAS */
+      const validUsers = [
+        { email: "admin@helping.com", pass: "admin123" },
+        { email: "usuario@helping.com", pass: "user123" }
+      ];
+
+      /* 4. DICCIONARIO DE IDIOMAS COMPLETO (i18n) */
+      const translations = {
+        es: {
+          metaTitle: "Helping - Inicio de Sesión",
+          navInicio: "INICIO",
+          navQuienesSomos: "QUIÉNES SOMOS",
+          navServicio: "SERVICIO",
+          navPortafolio: "PORTAFOLIO",
+          navContacto: "CONTACTO",
+          btnIniciarSesion: "INICIAR SESIÓN",
+          btnCerrarSesion: "CERRAR SESIÓN",
+          loginTitle1: "Bienvenido",
+          loginTitle2: "de nuevo",
+          loginSubtitle: "Ingresa tus credenciales para acceder a tu panel.",
+          errorMsg: "❌ Credenciales incorrectas. Intenta con admin@helping.com o usuario@helping.com",
+          labelEmail: "EMAIL CORPORATIVO",
+          labelPassword: "CONTRASEÑA",
+          forgotPass: "¿Olvidaste tu contraseña?",
+          btnSubmit: "INICIAR SESIÓN",
+          panelTitle: "¡Hola de nuevo!",
+          panelSubtitle: "Sesión iniciada con:",
+          card1Title: "Proyectos Activos",
+          card1Desc: "Consulta el avance y estado de tus proyectos de diseño y branding actual.",
+          card1Badge: "2 En Progreso",
+          card2Title: "Servicios Contratados",
+          card2Desc: "Revisa la lista de servicios activos y los detalles de tu suscripción.",
+          card2Badge: "Activo",
+          card3Title: "Soporte Técnico",
+          card3Desc: "Contacta directamente con nuestro equipo de diseño para cambios o dudas.",
+          card3Badge: "Disponible",
+          footerBrandDesc: "Agencia de diseño visual, branding e identidades digitales enfocadas en potenciar marcas.",
+          footerCopyright: "Todos los derechos reservados.",
+          footerNavTitle: "Navegación",
+          footerLegalesTitle: "Legales",
+          politicaPrivacidad: "Política de Privacidad",
+          footerConectaTitle: "Conecta",
+          langBtn: "🌐 EN"
+        },
+        en: {
+          metaTitle: "Helping - Log In",
+          navInicio: "HOME",
+          navQuienesSomos: "ABOUT US",
+          navServicio: "SERVICES",
+          navPortafolio: "PORTFOLIO",
+          navContacto: "CONTACT",
+          btnIniciarSesion: "LOG IN",
+          btnCerrarSesion: "LOG OUT",
+          loginTitle1: "Welcome",
+          loginTitle2: "back",
+          loginSubtitle: "Enter your credentials to access your dashboard.",
+          errorMsg: "❌ Incorrect credentials. Try admin@helping.com or usuario@helping.com",
+          labelEmail: "CORPORATE EMAIL",
+          labelPassword: "PASSWORD",
+          forgotPass: "Forgot your password?",
+          btnSubmit: "LOG IN",
+          panelTitle: "Welcome back!",
+          panelSubtitle: "Logged in as:",
+          card1Title: "Active Projects",
+          card1Desc: "Check the status and progress of your current design and branding projects.",
+          card1Badge: "2 In Progress",
+          card2Title: "Contracted Services",
+          card2Desc: "Review active services and subscription details.",
+          card2Badge: "Active",
+          card3Title: "Technical Support",
+          card3Desc: "Contact our design team directly for revisions or questions.",
+          card3Badge: "Available",
+          footerBrandDesc: "Visual design, branding, and digital identity agency focused on empowering brands.",
+          footerCopyright: "All rights reserved.",
+          footerNavTitle: "Navigation",
+          footerLegalesTitle: "Legal",
+          politicaPrivacidad: "Privacy Policy",
+          footerConectaTitle: "Connect",
+          langBtn: "🌐 ES"
+        }
+      };
+
+      /* 5. LÓGICA DE TRADUCCIÓN */
+      let currentLang = 'es';
+      const langBtn = document.getElementById("lang-toggle");
+
+      function updateLanguageUI(lang) {
+        // Actualizar el texto del botón de idioma
+        if (langBtn) {
+          langBtn.textContent = translations[lang].langBtn;
+        }
+
+        // Traducir todos los elementos marcados con data-i18n
+        document.querySelectorAll("[data-i18n]").forEach(element => {
+          const key = element.getAttribute("data-i18n");
+          if (translations[lang] && translations[lang][key]) {
+            element.textContent = translations[lang][key];
+          }
+        });
+
+        // Actualizar estado del botón dinámico del Navbar (Iniciar vs Cerrar Sesión)
+        if (btnSessionAction) {
+          const actionKey = isLoggedIn ? "btnCerrarSesion" : "btnIniciarSesion";
+          btnSessionAction.textContent = translations[lang][actionKey];
+        }
+      }
+
+      // Evento Click en el botón de cambio de idioma
+      if (langBtn) {
+        langBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          currentLang = currentLang === "es" ? "en" : "es";
+          updateLanguageUI(currentLang);
+        });
+      }
+
+      /* 6. LÓGICA DE AUTENTICACIÓN Y NAVEGACIÓN SPA */
+      const loginView = document.getElementById("login-view");
+      const panelView = document.getElementById("panel-view");
+      const loginForm = document.getElementById("login-form");
+      const errorMsg = document.getElementById("error-msg");
+      const userEmailDisplay = document.getElementById("user-email-display");
+      const btnSessionAction = document.getElementById("btn-session-action");
+
+      let isLoggedIn = false;
+
+      // Envío del formulario de Login
+      if (loginForm) {
+        loginForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+
+          const emailVal = document.getElementById("email").value.trim().toLowerCase();
+          const passVal = document.getElementById("password").value;
+
+          const match = validUsers.find(
+            u => u.email.toLowerCase() === emailVal && u.pass === passVal
+          );
+
+          if (match) {
+            if (errorMsg) errorMsg.style.display = "none";
+            
+            isLoggedIn = true;
+            userEmailDisplay.textContent = match.email;
+
+            // Cambiar vista activa
+            loginView.classList.remove("active");
+            panelView.classList.add("active");
+
+            // Actualizar el botón del Navbar
+            updateLanguageUI(currentLang);
+
+            // Limpiar campos del formulario
+            loginForm.reset();
+          } else {
+            if (errorMsg) errorMsg.style.display = "block";
+          }
+        });
+      }
+
+      // Acción de botón superior (Iniciar / Cerrar Sesión)
+      if (btnSessionAction) {
+        btnSessionAction.addEventListener("click", (e) => {
+          e.preventDefault();
+
+          if (isLoggedIn) {
+            // Cerrar Sesión
+            isLoggedIn = false;
+            panelView.classList.remove("active");
+            loginView.classList.add("active");
+
+            updateLanguageUI(currentLang);
+          }
+        });
+      }
+
+    });
+  </script>
+</body>
+</html>
