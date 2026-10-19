@@ -1,0 +1,855 @@
+/* ==========================================================================
+   1. VARIABLES Y CONFIGURACIÓN GENERAL (PALETA HELPING)
+   ========================================================================== */
+:root {
+  --bg-primary: #060b0e;
+  --bg-secondary: #0d1216;
+  --bg-card: #11171a;
+  --accent-cyan: #00f0ff;
+  --text-main: #ffffff;
+  --text-muted: #8a99a6;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-cyan: rgba(0, 240, 255, 0.3);
+  --danger-color: #ff4a4a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ============================================
+   2. NAVEGACIÓN Y NAVBAR
+   ============================================ */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px 20px 40px 20px; 
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  position: relative; 
+}
+
+/* Línea neón superior de la navegación */
+.navbar::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 1px;
+  background-color: #333333;
+}
+
+/* Logo */
+.logo, .logo-container {
+  display: flex;
+  align-items: center;
+  position: relative; 
+  width: 150px;       
+  height: 50px;       
+}
+
+.logo-img {
+  position: absolute;
+  top: -90px;    
+  left: -120px;   
+  height: 290px; 
+  width: auto;
+}
+
+/* Links y botones */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--text-muted);
+}
+
+.nav-links a {
+  padding: 8px 22px;
+  border-radius: 30px;
+  border: 1.5px solid transparent; 
+  transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+  border-color: var(--accent-cyan);
+  transform: scale(1.08);
+  box-shadow: 0 0 15px var(--accent-cyan), 0 0 25px rgba(0, 240, 255, 0.4);
+}
+
+.nav-links a.active {
+  color: #ffffff;
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 18px var(--accent-cyan), inset 0 0 6px rgba(0, 240, 255, 0.3);
+}
+
+.btn-primary-nav {
+  display: inline-block;
+  background-color: var(--accent-cyan);
+  color: #000000;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary-nav:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px var(--accent-cyan),
+              0 0 30px rgba(0, 240, 255, 0.6);
+}
+
+.btn-outline {
+  display: inline-block;
+  border: 1px solid rgba(0, 240, 255, 0.6);
+  padding: 8px 18px;
+  border-radius: 20px;
+  transition: transform 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-outline:hover {
+  transform: scale(1.05);
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+}
+
+/* Botón Hamburguesa Móvil (oculto en PC) */
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+  z-index: 1000;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: var(--accent-cyan, #00f0ff);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.mobile-btn { display: none; }
+.desktop-btn { display: inline-block; }
+
+/* ============================================
+   INICIO: ESTILOS BOTÓN FLOTANTE WHATSAPP
+   ============================================ */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+  z-index: 9999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+}
+
+.whatsapp-btn .whatsapp-img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+/* EFECTOS HOVER */
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.7);
+}
+
+.whatsapp-btn:active {
+  transform: scale(0.95);
+}
+
+/* RESPONSIVO PARA DISPOSITIVOS MÓVILES */
+@media (max-width: 768px) {
+  .whatsapp-btn {
+    width: 52px;
+    height: 52px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .whatsapp-btn .whatsapp-img {
+    width: 30px;
+    height: 30px;
+  }
+}
+/* === FIN: ESTILOS BOTÓN FLOTANTE WHATSAPP === */
+
+
+/* ============================================
+   INICIO: ESTILOS CHATBOT FAQ FLOTANTE
+   ============================================ */
+.faq-chat-btn {
+  position: fixed;
+  bottom: 95px; /* Ubicado arriba del botón de WhatsApp */
+  right: 25px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #121212;
+  border: 1px solid #00f3ff;
+  color: #00f3ff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-chat-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(0, 243, 255, 0.6);
+}
+
+.faq-chat-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background-color: #00f3ff;
+  color: #000;
+  font-size: 0.7rem;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* VENTANA CONTENEDORA */
+.faq-chat-container {
+  position: fixed;
+  bottom: 160px;
+  right: 25px;
+  width: 330px;
+  max-height: 480px;
+  background: #0d0d0d;
+  border: 1px solid #222222;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 243, 255, 0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 9998;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.faq-chat-container.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+}
+
+/* ENCABEZADO */
+.faq-chat-header {
+  background: #141414;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #222;
+}
+
+.faq-chat-avatar img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid #00f3ff;
+}
+
+.faq-chat-info h4 {
+  font-size: 0.9rem;
+  color: #fff;
+  margin: 0;
+}
+
+.faq-status-online {
+  font-size: 0.75rem;
+  color: #00f3ff;
+}
+
+.faq-close-btn {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.faq-close-btn:hover {
+  color: #fff;
+}
+
+/* CUERPO MENSAJES */
+.faq-chat-body {
+  padding: 15px;
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 260px;
+}
+
+.chat-msg {
+  max-width: 85%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.bot-msg {
+  background: #1c1c1c;
+  color: #e0e0e0;
+  align-self: flex-start;
+  border-left: 2px solid #00f3ff;
+}
+
+.user-msg {
+  background: #00f3ff;
+  color: #000;
+  font-weight: 600;
+  align-self: flex-end;
+}
+
+/* OPCIONES / BOTONES DE PREGUNTAS */
+.faq-chat-options {
+  padding: 12px;
+  background: #111;
+  border-top: 1px solid #222;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.faq-option-btn {
+  background: #181818;
+  border: 1px solid #333;
+  color: #bbb;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.faq-option-btn:hover {
+  border-color: #00f3ff;
+  color: #00f3ff;
+  background: #202020;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .faq-chat-container {
+    right: 15px;
+    width: calc(100vw - 30px);
+    bottom: 140px;
+  }
+}
+/* === FIN: ESTILOS CHATBOT FAQ FLOTANTE === */
+
+
+/* ============================================
+   INICIO: ANIMACIÓN FLOTANTE ABAJO HACIA ARRIBA
+   ============================================ */
+
+/* Definición de la animación de desplazamiento suave */
+@keyframes floatUp {
+  0% {
+    transform: translateY(12px);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(12px);
+    opacity: 0.8;
+  }
+}
+
+/* Aplicación de la animación al Botón de WhatsApp */
+.whatsapp-btn {
+  animation: floatUp 3s ease-in-out infinite;
+}
+
+/* Aplicación de la animación al Botón del Chatbox */
+.faq-chat-btn {
+  animation: floatUp 3s ease-in-out infinite;
+  animation-delay: 0.4s; /* Pequeño desfase para que se muevan en armonía */
+}
+
+/* Ajuste en HOVER para priorizar la interacción del usuario */
+.whatsapp-btn:hover,
+.faq-chat-btn:hover {
+  animation-play-state: paused;
+  transform: translateY(-8px) scale(1.1);
+}
+
+/* === FIN: ANIMACIÓN FLOTANTE ABAJO HACIA ARRIBA === */
+
+/* ==========================================================================
+   3. ESTRUCTURA Y TRANSICIONES DE VISTAS (SPA)
+   ========================================================================== */
+.view-section {
+  display: none;
+  width: 100%;
+}
+
+.view-section.active {
+  display: block;
+}
+
+/* ==========================================================================
+   4. VISTA 1: FORMULARIO DE INICIO DE SESIÓN
+   ========================================================================== */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  min-height: calc(100vh - 250px);
+}
+
+.login-box {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-cyan);
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 440px;
+  box-shadow: 0 0 35px rgba(0, 240, 255, 0.1);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.login-header h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.login-header .highlight {
+  color: var(--accent-cyan);
+}
+
+.login-header p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* Campos de entrada */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.8px;
+  margin-bottom: 8px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper i, 
+.input-wrapper svg {
+  position: absolute;
+  left: 14px;
+  color: var(--text-muted);
+  width: 18px;
+  height: 18px;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 12px 14px 12px 42px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  color: var(--text-main);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-wrapper input:focus {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 24px;
+}
+
+.forgot-pass {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.forgot-pass:hover {
+  color: var(--accent-cyan);
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--accent-cyan);
+  color: var(--bg-primary);
+  border: none;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.6);
+}
+
+/* ==========================================================================
+   5. VISTA 2: PANEL DE USUARIO (DASHBOARD)
+   ========================================================================== */
+.user-panel-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.user-welcome-header {
+  background: var(--bg-card);
+  border: 1px solid var(--border-cyan);
+  border-radius: 16px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.08);
+}
+
+.user-welcome-header h1 {
+  font-size: 1.8rem;
+  color: var(--text-main);
+  margin-bottom: 5px;
+}
+
+.user-welcome-header p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.user-email-text {
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
+
+/* Grilla del panel */
+.user-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.user-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.user-card:hover {
+  border-color: var(--accent-cyan);
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.user-card h3 {
+  color: var(--accent-cyan);
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.user-card p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.status-badge {
+  display: inline-block;
+  align-self: flex-start;
+  background: rgba(0, 240, 255, 0.1);
+  color: var(--accent-cyan);
+  border: 1px solid var(--border-cyan);
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-top: 18px;
+}
+
+/* ============================================
+   INICIO: FOOTER ANIMADO
+   ============================================ */
+.site-footer {
+  width: 100%;
+  margin-top: auto;
+  background-color: #080d0f;
+  border-top: 1px solid var(--accent-cyan, #00f0ff);
+  box-shadow: 0 -3px 15px rgba(0, 240, 255, 0.4);
+  padding: 50px 20px 30px;
+  position: relative;
+  clear: both;
+}
+
+.site-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  gap: 40px;
+  align-items: start;
+}
+
+/* Columna de Marca y Logo */
+.footer-col-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  position: relative;
+}
+
+.footer-logo-anchor {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 90px;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.footer-logo-pop {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.footer-logo-pop img {
+  height: 190px; /* Tamaño adaptable controlado */
+  width: auto;
+  transform: translateX(-32px);
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-logo-pop:hover img {
+  transform: translateY(-3px) scale(1.05);
+  filter: drop-shadow(0 0 8px var(--accent-cyan));}
+
+.footer-brand-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-white, #ffffff);
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.footer-brand-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted, #8a99a6);
+  line-height: 1.5;
+  max-width: 300px;
+  margin: 0;
+}
+
+.footer-copyright {
+  font-size: 0.78rem;
+  color: #5d6d74;
+  margin-top: 8px;
+}
+
+/* Titulares de Columnas */
+.footer-col-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-white, #ffffff);
+  margin: 0 0 16px 0;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-col-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--accent-cyan, #00f0ff);
+  transition: width 0.3s ease;
+}
+
+.footer-col:hover .footer-col-title::after {
+  width: 100%;
+}
+
+/* Enlaces del Menú */
+.footer-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-menu a {
+  color: var(--text-muted, #8a99a6);
+  font-size: 0.85rem;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.footer-menu a:hover {
+  color: var(--accent-cyan, #00f0ff);
+  transform: translateX(6px);
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.5);
+}
+
+/* Adaptabilidad Móvil (Responsive) */
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .footer-col-brand {
+    align-items: center;
+  }
+
+  .footer-logo-anchor {
+    justify-content: center;
+  }
+
+  .footer-logo-pop img {
+    transform: translateX(0) !important;
+  }
+
+  .footer-logo-pop:hover img {
+    transform: translateY(-3px) scale(1.05) !important;
+  }
+
+  .footer-brand-desc {
+    max-width: 100%;
+  }
+
+  .footer-col-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-col:hover .footer-col-title::after {
+    width: 60%;
+  }
+
+  .footer-menu a:hover {
+    transform: translateY(-2px);
+  }
+}
+/* === TERMINA: FOOTER ANIMADO === */

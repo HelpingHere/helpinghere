@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Helping - Servicios</title>
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="../Servicio/icon-192x192.png">
+  <!-- ESTILOS CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================
+     INICIO: HEADER / NAVBAR
+     ============================================ -->
+<header class="navbar">
+  <div class="logo-container">
+    <a href="./servicio.html">
+      <img src="../Servicio/Logo real vectorizado.svg" alt="Helping Logo" class="logo-img">
+    </a>
+  </div>
+
+  <!-- Botón Hamburguesa Móvil -->
+  <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" type="button">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- Navegación Principales con ID requerido para JS -->
+  <nav class="nav-links" id="navMenu">
+    <a href="../inicio.html" data-i18n="nav-inicio">INICIO</a>
+    <a href="../Quienes somos/Quienes.html" data-i18n="nav-quienes">QUIÉNES SOMOS</a>
+    <a href="#" class="active" data-i18n="nav-servicio">SERVICIOS</a>
+    <a href="../Portafolio/Portafolio.html" data-i18n="nav-portafolio">PORTAFOLIO</a>
+    <a href="../Contacto/Contacto.html" data-i18n="nav-contacto">CONTÁCTANOS</a>
+    
+    <!-- Botón Cambio de Idioma -->
+    <a href="#" id="lang-toggle" class="btn-lang-pill">🌐 EN</a>
+
+    <!-- Botón Iniciar Sesión móvil dentro del menú desplegable -->
+    <a href="../Sesion iniciada/login.html" class="btn-primary-nav mobile-btn" data-i18n="btn-sesion">INICIAR SESION</a>
+  </nav>
+
+  <!-- Botón Iniciar Sesión para versión escritorio -->
+  <a href="../Sesion iniciada/login.html" class="btn-primary-nav desktop-btn" data-i18n="btn-sesion">INICIAR SESION</a>
+</header>
+
+
+<!-- ============================================
+     INICIO: BOTÓN FLOTANTE DE WHATSAPP
+     ============================================ -->
+<a href="https://wa.me/573152289258?text=Hola%20Helping,%20quisiera%20recibir%20más%20información%20sobre%20sus%20servicios." 
+   class="whatsapp-btn" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   aria-label="Contactar por WhatsApp">
+  <img src="../Servicio/whatsc.png" alt="WhatsApp" class="whatsapp-img">
+</a>
+<!-- === FIN: BOTÓN FLOTANTE DE WHATSAPP === -->
+
+
+
+
+
+
+
+
+<!-- === TERMINA: HEADER / NAVBAR === -->
+
+  <!-- ============================================
+       INICIO: CONTENIDO PRINCIPAL (HERO DE SERVICIOS)
+       ============================================ -->
+  <main>
+    <section class="services-hero">
+      <h1>
+        <span class="word-glow" data-i18n="hero-1">Elevamos</span>
+        <span class="word-glow" data-i18n="hero-2">el</span> <br>
+        <span class="word-glow cyan-highlight" data-i18n="hero-3">estándar</span>
+        <span class="word-glow" data-i18n="hero-4">digital.</span>
+      </h1>
+      <p class="hero-text" data-i18n="hero-desc">
+        No solo diseñamos interfaces; construimos ecosistemas de alta fidelidad donde la tecnología y la estética convergen en una experiencia inolvidable.
+      </p>
+    </section>
+
+    <!-- ============================================
+       INICIO: SECCIÓN DE VIDEO PROMOCIONAL
+       ============================================ -->
+  <section class="promo-video-section">
+    <div class="video-container-wrapper">
+      <div class="video-header">
+  <h2 data-i18n="videoHeaderTitle">Descubre Nuestra Esencia</h2>
+  <p data-i18n="videoHeaderDesc">Un vistazo rápido a cómo transformamos ideas en ecosistemas digitales de alto impacto.</p>
+</div>
+      
+      <div class="video-frame-container">
+        <!-- Reemplaza 'tu-video.mp4' con la ruta de tu archivo de video -->
+       <video controls playsinline class="promo-video">
+          <source src="../Video final Helping.mp4" type="video/mp4">
+          Video promocional Helping.
+        </video>
+      </div>
+    </div>
+  </section>
+  <!-- === TERMINA: SECCIÓN DE VIDEO PROMOCIONAL === -->
+
+    <!-- INICIO: SECCIÓN DE TARJETAS DE SERVICIOS -->
+    <section class="projects-section zoom-element">
+      <div class="projects-header">
+        <div>
+          <h2>
+            <span data-i18n="sec-1">Servicios</span> 
+            <span class="neon-text" data-i18n="sec-2">especializados</span><br>
+            <span data-i18n="sec-3">para</span> 
+            <span data-i18n="sec-4">impulsar</span> 
+            <span data-i18n="sec-5">tu</span> 
+            <span data-i18n="sec-6">marca</span>
+          </h2>
+        </div>
+      </div>
+
+      <div class="cards-grid">
+        <!-- TARJETA 1: BRANDING DIGITAL -->
+        <article class="portfolio-card zoom-element">
+          <div class="card-preview">
+            <img src="../Servicio/Foto Branding Digital.jpg" alt="Branding Digital">
+          </div>
+          <div class="card-body">
+            <div class="client-header">
+              <div class="client-info">
+                <h3 data-i18n="card1-title">Branding Digital</h3>
+                <p data-i18n="card1-sub">Posicionamiento Digital</p>
+              </div>
+            </div>
+            <p class="description" data-i18n="card1-desc">
+              Estrategia visual y conceptual diseñada para ubicar a la marca en el lugar preferente de la mente del consumidor.
+            </p>
+            <a href="#" class="btn-case-study" data-modal="modal-branding" data-i18n="btn-saber">Saber más</a>
+          </div>
+        </article>
+
+        <!-- TARJETA 2: IDENTIDAD VISUAL -->
+        <article class="portfolio-card zoom-element">
+          <div class="card-preview">
+            <img src="../Servicio/Foto identidad visual.jpg" alt="Identidad visual">
+          </div>
+          <div class="card-body">
+            <div class="client-header">
+              <div class="client-info">
+                <h3 data-i18n="card2-title">Identidad visual</h3>
+                <p data-i18n="card2-sub">Personalidad gráfica</p>
+              </div>
+            </div>
+            <p class="description" data-i18n="card2-desc">
+              Universo estético e intencional creado para proyectar el carácter único del negocio y su público objetivo.
+            </p>
+            <a href="#" class="btn-case-study" data-modal="modal-identidad" data-i18n="btn-saber">Saber más</a>
+          </div>
+        </article>
+
+        <!-- TARJETA 3: DISEÑO GRÁFICO CORPORATIVO -->
+        <article class="portfolio-card zoom-element">
+          <div class="card-preview">
+            <img src="../Servicio/Diseño grafico corporativo.png" alt="Diseño gráfico corporativo">
+          </div>
+          <div class="card-body">
+            <div class="client-header">
+              <div class="client-info">
+                <h3 data-i18n="card3-title">Diseño gráfico corporativo</h3>
+                <p data-i18n="card3-sub">Comunicación Institucional</p>
+              </div>
+            </div>
+            <p class="description" data-i18n="card3-desc">
+              Materiales y elementos impresos y digitales que transmiten la solidez, valores y profesionalismo de tu empresa.
+            </p>
+            <a href="#" class="btn-case-study" data-modal="modal-corporativo" data-i18n="btn-saber">Saber más</a>
+          </div>
+        </article>
+
+        <!-- TARJETA 4: DISEÑO PUBLICITARIO -->
+        <article class="portfolio-card zoom-element">
+          <div class="card-preview">
+            <img src="../Servicio/Diseño grafico publicitario.jpg" alt="Diseño publicitario">
+          </div>
+          <div class="card-body">
+            <div class="client-header">
+              <div class="client-info">
+                <h3 data-i18n="card4-title">Diseño publicitario</h3>
+                <p data-i18n="card4-sub">Impacto & Conversión</p>
+              </div>
+            </div>
+            <p class="description" data-i18n="card4-desc">
+              Campañas de alto impacto visual orientadas a captar la atención de tu audiencia y maximizar ventas o conversiones.
+            </p>
+            <a href="#" class="btn-case-study" data-modal="modal-publicitario" data-i18n="btn-saber">Saber más</a>
+          </div>
+        </article>
+
+        <!-- TARJETA 5: CONTENIDO AUDIOVISUAL -->
+        <article class="portfolio-card zoom-element">
+          <div class="card-preview">
+            <img src="../Servicio/Contenido audiovisual.png" alt="Contenido audiovisual">
+          </div>
+          <div class="card-body">
+            <div class="client-header">
+              <div class="client-info">
+                <h3 data-i18n="card5-title">Contenido audiovisual</h3>
+                <p data-i18n="card5-sub">Producción & Edición</p>
+              </div>
+            </div>
+            <p class="description" data-i18n="card5-desc">
+              Edición de video dinámico, animaciones y piezas multimedia adaptadas para conectar emocionalmente con tu audiencia.
+            </p>
+            <a href="#" class="btn-case-study" data-modal="modal-audiovisual" data-i18n="btn-saber">Saber más</a>
+          </div>
+        </article>
+
+        <!-- TARJETA 6: DISEÑO PARA REDES -->
+        <article class="portfolio-card zoom-element">
+          <div class="card-preview">
+            <img src="../Servicio/Diseño para redes.png" alt="Diseño para redes">
+          </div>
+          <div class="card-body">
+            <div class="client-header">
+              <div class="client-info">
+                <h3 data-i18n="card6-title">Diseño para redes</h3>
+                <p data-i18n="card6-sub">Presencia & Feeds Impactantes</p>
+              </div>
+            </div>
+            <p class="description" data-i18n="card6-desc">
+              Creación de plantillas, posts, stories y layouts optimizados para destacar en Instagram, LinkedIn, Facebook y TikTok.
+            </p>
+            <a href="#" class="btn-case-study" data-modal="modal-redes" data-i18n="btn-saber">Saber más</a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- === TERMINA: SECCIÓN DE TARJETAS DE SERVICIOS === -->
+
+    
+   <!-- ============================================
+     INICIO: MODALES DE SERVICIOS
+     ============================================ -->
+
+    <!-- MODAL 1: BRANDING DIGITAL -->
+    <div id="modal-branding" class="modal-overlay">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Cerrar modal">&times;</button>
+        <div class="modal-header">
+          <span class="badge" data-i18n="modal1Badge">Estrategia & Marca</span>
+          <h2 data-i18n="modal1Title">Branding Digital</h2>
+          <p class="modal-subtitle" data-i18n="modal1Sub">Posicionamiento conceptual y visual estratégico.</p>
+        </div>
+        <div class="modal-tags">
+          <span data-i18n="modal1Tag1">Estrategia</span>
+          <span data-i18n="modal1Tag2">Identidad</span>
+          <span data-i18n="modal1Tag3">Posicionamiento</span>
+        </div>
+        <div class="modal-preview-text">
+          <p data-i18n="modal1Desc">Diseño y gestión de marcas memorables: logotipo, universo visual y propuesta de valor diferenciadora.</p>
+        </div>
+        <a href="../Contacto/Contacto.html" class="btn-modal-cta">
+          <span class="btn-main-text" data-i18n="modalBtnCta">Quiero mi proyecto ↗</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- MODAL 2: IDENTIDAD VISUAL -->
+    <div id="modal-identidad" class="modal-overlay">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Cerrar modal">&times;</button>
+        <div class="modal-header">
+          <span class="badge" data-i18n="modal2Badge">Diseño de Marca</span>
+          <h2 data-i18n="modal2Title">Identidad Visual</h2>
+          <p class="modal-subtitle" data-i18n="modal2Sub">Universo estético e intencional para marcas únicas.</p>
+        </div>
+        <div class="modal-tags">
+          <span data-i18n="modal2Tag1">Diseño de logo</span>
+          <span data-i18n="modal2Tag2">Sistema Visual</span>
+          <span data-i18n="modal2Tag3">Paleta & Tipografía</span>
+        </div>
+        <div class="modal-preview-text">
+          <p data-i18n="modal2Desc">Creación de sistemas gráficos coherentes: paleta tipográfica, elementos de marca y manuales estéticos para un impacto perdurable.</p>
+        </div>
+        <a href="../Contacto/Contacto.html" class="btn-modal-cta">
+          <span class="btn-main-text" data-i18n="modalBtnCta">Quiero mi proyecto ↗</span>
+        </a>
+      </div>  
+    </div>
+
+    <!-- MODAL 3: DISEÑO GRÁFICO CORPORATIVO -->
+    <div id="modal-corporativo" class="modal-overlay">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Cerrar modal">&times;</button>
+        <div class="modal-header">
+          <span class="badge" data-i18n="modal3Badge">Corporativo</span>
+          <h2 data-i18n="modal3Title">Diseño Gráfico Corporativo</h2>
+          <p class="modal-subtitle" data-i18n="modal3Sub">Estructura gráfica sólida para la imagen institucional de tu empresa.</p>
+        </div>
+        <div class="modal-tags">
+          <span data-i18n="modal3Tag1">Tarjetas</span>
+          <span data-i18n="modal3Tag2">Brochures</span>
+          <span data-i18n="modal3Tag3">Papelería</span>
+        </div>
+        <div class="modal-preview-text">
+          <p data-i18n="modal3Desc">Creamos presentaciones ejecutivas, catálogos, papelería profesional e informes corporativos con diseño de alto nivel.</p>
+        </div>
+        <a href="../Contacto/Contacto.html" class="btn-modal-cta">
+          <span class="btn-main-text" data-i18n="modalBtnCta">Quiero mi proyecto ↗</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- MODAL 4: DISEÑO PUBLICITARIO -->
+    <div id="modal-publicitario" class="modal-overlay">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Cerrar modal">&times;</button>
+        <div class="modal-header">
+          <span class="badge" data-i18n="modal4Badge">Publicidad</span>
+          <h2 data-i18n="modal4Title">Diseño Publicitario</h2>
+          <p class="modal-subtitle" data-i18n="modal4Sub">Creatividad enfocada en captar clientes y potenciar campañas.</p>
+        </div>
+        <div class="modal-tags">
+          <span data-i18n="modal4Tag1">Banners</span>
+          <span data-i18n="modal4Tag2">Afiches</span>
+          <span data-i18n="modal4Tag3">Campaigns</span>
+        </div>
+        <div class="modal-preview-text">
+          <p data-i18n="modal4Desc">Desarrollo de piezas publicitarias atractivas para plataformas digitales y medios impresos que generan acción inmediata.</p>
+        </div>
+        <a href="../Contacto/Contacto.html" class="btn-modal-cta">
+          <span class="btn-main-text" data-i18n="modalBtnCta">Quiero mi proyecto ↗</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- MODAL 5: CONTENIDO AUDIOVISUAL -->
+    <div id="modal-audiovisual" class="modal-overlay">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Cerrar modal">&times;</button>
+        <div class="modal-header">
+          <span class="badge" data-i18n="modal5Badge">Audiovisual</span>
+          <h2 data-i18n="modal5Title">Contenido Audiovisual</h2>
+          <p class="modal-subtitle" data-i18n="modal5Sub">Edición y animación de video profesional para destacar tu marca.</p>
+        </div>
+        <div class="modal-tags">
+          <span data-i18n="modal5Tag1">Reels/Shorts</span>
+          <span data-i18n="modal5Tag2">Edición</span>
+          <span data-i18n="modal5Tag3">Motion Graphics</span>
+        </div>
+        <div class="modal-preview-text">
+          <p data-i18n="modal5Desc">Producción y postproducción de videos promocionales, animaciones sencillas y clips optimizados para plataformas de video.</p>
+        </div>
+        <a href="../Contacto/Contacto.html" class="btn-modal-cta">
+          <span class="btn-main-text" data-i18n="modalBtnCta">Quiero mi proyecto ↗</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- MODAL 6: DISEÑO PARA REDES -->
+    <div id="modal-redes" class="modal-overlay">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Cerrar modal">&times;</button>
+        <div class="modal-header">
+          <span class="badge" data-i18n="modal6Badge">Redes Sociales</span>
+          <h2 data-i18n="modal6Title">Diseño para Redes</h2>
+          <p class="modal-subtitle" data-i18n="modal6Sub">Estrategia estética para redes sociales que marcan tendencia.</p>
+        </div>
+        <div class="modal-tags">
+          <span data-i18n="modal6Tag1">Instagram</span>
+          <span data-i18n="modal6Tag2">Templates</span>
+          <span data-i18n="modal6Tag3">Stories</span>
+        </div>
+        <div class="modal-preview-text">
+          <p data-i18n="modal6Desc">Diseño de feeds armoniosos, portadas, carruseles educativos e historias creativas listas para publicar.</p>
+        </div>
+        <a href="../Contacto/Contacto.html" class="btn-modal-cta">
+          <span class="btn-main-text" data-i18n="modalBtnCta">Quiero mi proyecto ↗</span>
+        </a>
+      </div>
+    </div>
+    <!-- === TERMINA: MODALES DE SERVICIOS === -->
+
+    <!-- INICIO: CTA SECTION -->
+    <section class="cta-section">
+      <h2>
+        <span class="word-glow" data-i18n="cta-1">Listo</span>
+        <span class="word-glow" data-i18n="cta-2">para</span>
+        <span class="word-glow" data-i18n="cta-3">la</span>
+        <span class="word-glow cyan-highlight" data-i18n="cta-4">evolución?</span>
+      </h2>
+      <a href="../Contacto/Contacto.html" class="btn-cyan" data-i18n="btn-inicia">INICIA TU PROYECTO</a>
+    </section>
+    <!-- FIN: CTA SECTION -->
+  </main>
+  <!-- FIN: CONTENIDO PRINCIPAL -->
+
+<!-- ============================================
+     INICIO: FOOTER ANIMADO
+     ============================================ -->
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <!-- Columna 1: Marca y Logo -->
+    <div class="footer-col footer-col-brand">
+      <p class="footer-brand-title">Helping</p>
+
+      <div class="footer-logo-anchor">
+        <a href="../Servicio/servicio.html" class="footer-logo-pop">
+          <img src="Logo real vectorizado.svg" alt="Helping Logo">
+        </a>
+      </div>
+
+      <p class="footer-brand-desc" data-i18n="footer-desc">
+        Agencia de diseño visual, branding e identidades digitales enfocadas en potenciar marcas.
+      </p>
+      <p class="footer-copyright" data-i18n="footer-copy">
+        © 2026 Helping. Todos los derechos reservados.
+      </p>
+    </div>
+
+    <!-- Columna 2: Navegación -->
+    <div class="footer-col">
+      <h4 class="footer-col-title" data-i18n="footer-nav-title">Navegación</h4>
+      <ul class="footer-menu">
+        <li><a href="../inicio.html" data-i18n="nav-inicio">INICIO</a></li>
+        <li><a href="../Quienes somos/Quienes.html" data-i18n="nav-quienes">QUIÉNES SOMOS</a></li>
+        <li><a href="../Servicio/servicio.html" data-i18n="nav-servicio">SERVICIOS</a></li>
+        <li><a href="../Portafolio/Portafolio.html" data-i18n="nav-portafolio">PORTAFOLIO</a></li>
+        <li><a href="../Contacto/Contacto.html" data-i18n="nav-contacto">CONTÁCTANOS</a></li>
+      </ul>
+    </div>
+
+    <!-- Columna 3: Legales -->
+    <div class="footer-col">
+      <h4 class="footer-col-title" data-i18n="footer-legal-title">Legales</h4>
+      <ul class="footer-menu">
+        <li><a href="./Privacidad/privacidad.html" data-i18n="footer-privacy">Política de Privacidad</a></li>
+      </ul>
+    </div>
+
+    <!-- Columna 4: Redes -->
+    <div class="footer-col">
+      <h4 class="footer-col-title" data-i18n="footer-connect-title">Conecta</h4>
+      <ul class="footer-menu">
+        <li><a href="https://www.instagram.com/somoshelping/" target="_blank" rel="noopener">INSTAGRAM</a></li>
+        <li><a href="https://www.linkedin.com/in/martin-lora-garrido-6b4b09430/" target="_blank" rel="noopener">LINKEDIN</a></li>
+        <li><a href="https://wa.me/3152289258" target="_blank" rel="noopener">WHATSAPP</a></li>
+      </ul>
+    </div>
+
+  </div>
+</footer>
+<!-- === TERMINA: FOOTER ANIMADO === -->
+
+  
+
+  <!-- ============================================
+       INICIO: SCRIPTS JAVASCRIPT (TRADUCCIÓN E INTERACTIVIDAD)
+       ============================================ -->
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+
+  // Diccionario de Traducciones (ES / EN)
+ const translations = {
+  es: {
+    // Navbar
+    "nav-inicio": "INICIO",
+    "nav-quienes": "QUIÉNES SOMOS",
+    "nav-servicio": "SERVICIOS",
+    "nav-portafolio": "PORTAFOLIO",
+    "nav-contacto": "CONTÁCTANOS",
+    "btn-sesion": "INICIAR SESION",
+    "langBtn": "EN",
+
+    // Encabezado del Video
+    "videoHeaderTitle": "Descubre Nuestra Esencia",
+    "videoHeaderDesc": "Un vistazo rápido a cómo transformamos ideas en ecosistemas digitales de alto impacto.",
+
+    // Secciones Principales
+    "hero-1": "Elevamos",
+    "hero-2": "el",
+    "hero-3": "estándar",
+    "hero-4": "digital.",
+    "hero-desc": "No solo diseñamos interfaces; construimos ecosistemas de alta fidelidad donde la tecnología y la estética convergen en una experiencia inolvidable.",
+    "sec-1": "Servicios",
+    "sec-2": "especializados",
+    "sec-3": "para",
+    "sec-4": "impulsar",
+    "sec-5": "tu",
+    "sec-6": "marca",
+
+    // Tarjetas de Servicios
+    "card1-title": "Branding Digital",
+    "card1-sub": "Posicionamiento Digital",
+    "card1-desc": "Estrategia visual y conceptual diseñada para ubicar a la marca en el lugar preferente de la mente del consumidor.",
+    "card2-title": "Identidad visual",
+    "card2-sub": "Personalidad gráfica",
+    "card2-desc": "Universo estético e intencional creado para proyectar el carácter único del negocio y su público objetivo.",
+    "card3-title": "Diseño gráfico corporativo",
+    "card3-sub": "Comunicación Institucional",
+    "card3-desc": "Materiales y elementos impresos y digitales que transmiten la solidez, valores y profesionalismo de tu empresa.",
+    "card4-title": "Diseño publicitario",
+    "card4-sub": "Impacto & Conversión",
+    "card4-desc": "Campañas de alto impacto visual orientadas a captar la atención de tu audiencia y maximizar ventas o conversiones.",
+    "card5-title": "Contenido audiovisual",
+    "card5-sub": "Producción & Edición",
+    "card5-desc": "Edición de video dinámico, animaciones y piezas multimedia adaptadas para conectar emocionalmente con tu audiencia.",
+    "card6-title": "Diseño para redes",
+    "card6-sub": "Presencia & Feeds Impactantes",
+    "card6-desc": "Creación de plantillas, posts, stories y layouts optimizados para destacar en Instagram, LinkedIn, Facebook y TikTok.",
+    "btn-saber": "Saber más",
+
+    // Modales de Servicios (Títulos, subtítulos, textos y botones internos)
+    "modalBtnCta": "Quiero mi proyecto ↗",
+    
+    // Modal 1: Branding Digital
+    "modal1Badge": "Estrategia & Marca",
+    "modal1Title": "Branding Digital",
+    "modal1Sub": "Posicionamiento conceptual y visual estratégico.",
+    "modal1Tag1": "Estrategia",
+    "modal1Tag2": "Identidad",
+    "modal1Tag3": "Posicionamiento",
+    "modal1Desc": "Diseño y gestión de marcas memorables: logotipo, universo visual y propuesta de valor diferenciadora.",
+
+    // Modal 2: Identidad Visual
+    "modal2Badge": "Diseño de Marca",
+    "modal2Title": "Identidad Visual",
+    "modal2Sub": "Universo estético e intencional para marcas únicas.",
+    "modal2Tag1": "Diseño de logo",
+    "modal2Tag2": "Sistema Visual",
+    "modal2Tag3": "Paleta & Tipografía",
+    "modal2Desc": "Creación de sistemas gráficos coherentes: paleta tipográfica, elementos de marca y manuales estéticos para un impacto perdurable.",
+
+    // Modal 3: Diseño Gráfico Corporativo
+    "modal3Badge": "Corporativo",
+    "modal3Title": "Diseño Gráfico Corporativo",
+    "modal3Sub": "Estructura gráfica sólida para la imagen institucional de tu empresa.",
+    "modal3Tag1": "Tarjetas",
+    "modal3Tag2": "Brochures",
+    "modal3Tag3": "Papelería",
+    "modal3Desc": "Creamos presentaciones ejecutivas, catálogos, papelería profesional e informes corporativos con diseño de alto nivel.",
+
+    // Modal 4: Diseño Publicitario
+    "modal4Badge": "Publicidad",
+    "modal4Title": "Diseño Publicitario",
+    "modal4Sub": "Creatividad enfocada en captar clientes y potenciar campañas.",
+    "modal4Tag1": "Banners",
+    "modal4Tag2": "Afiches",
+    "modal4Tag3": "Campaigns",
+    "modal4Desc": "Desarrollo de piezas publicitarias atractivas para plataformas digitales y medios impresos que generan acción inmediata.",
+
+    // Modal 5: Contenido Audiovisual
+    "modal5Badge": "Audiovisual",
+    "modal5Title": "Contenido Audiovisual",
+    "modal5Sub": "Edición y animación de video profesional para destacar tu marca.",
+    "modal5Tag1": "Reels/Shorts",
+    "modal5Tag2": "Edición",
+    "modal5Tag3": "Motion Graphics",
+    "modal5Desc": "Producción y postproducción de videos promocionales, animaciones sencillas y clips optimizados para plataformas de video.",
+
+    // Modal 6: Diseño para Redes
+    "modal6Badge": "Redes Sociales",
+    "modal6Title": "Diseño para Redes",
+    "modal6Sub": "Estrategia estética para redes sociales que marcan tendencia.",
+    "modal6Tag1": "Instagram",
+    "modal6Tag2": "Templates",
+    "modal6Tag3": "Stories",
+    "modal6Desc": "Diseño de feeds armoniosos, portadas, carruseles educativos e historias creativas listas para publicar.",
+
+    // CTA
+    "cta-1": "Listo",
+    "cta-2": "para",
+    "cta-3": "la",
+    "cta-4": "evolución?",
+    "btn-inicia": "INICIA TU PROYECTO",
+
+    // Footer
+    "footer-desc": "Agencia de diseño visual, branding e identidades digitales enfocadas en potenciar marcas.",
+    "footer-copy": "© 2026 Helping. Todos los derechos reservados.",
+    "footer-nav-title": "Navegación",
+    "footer-legal-title": "Legales",
+    "footer-privacy": "Política de Privacidad",
+    "footer-connect-title": "Conecta",
+
+    // Chatbot FAQ Translations
+    "faq_welcome": "¡Hola! 👋 Bienvenido a Helping. ¿En qué podemos ayudarte hoy? Selecciona una pregunta:",
+    "faq_q1": "¿Qué servicios ofrecen?",
+    "faq_q2": "¿Cómo solicito una cotización?",
+    "faq_q3": "¿Tiempos de entrega de un proyecto?",
+    "faq_q4": "Hablar con un asesor directo"
+  },
+  en: {
+    "nav-inicio": "HOME",
+    "nav-quienes": "ABOUT US",
+    "nav-servicio": "SERVICES",
+    "nav-portafolio": "PORTFOLIO",
+    "nav-contacto": "CONTACT US",
+    "btn-sesion": "LOG IN",
+    "langBtn": "ES",
+
+    // Encabezado del Video
+    "videoHeaderTitle": "Discover Our Essence",
+    "videoHeaderDesc": "A quick look at how we transform ideas into high-impact digital ecosystems.",
+
+    // Secciones Principales
+    "hero-1": "We raise",
+    "hero-2": "the",
+    "hero-3": "digital",
+    "hero-4": "standard.",
+    "hero-desc": "We don't just design interfaces; we build high-fidelity ecosystems where technology and aesthetics converge into an unforgettable experience.",
+    "sec-1": "Specialized",
+    "sec-2": "services",
+    "sec-3": "to",
+    "sec-4": "boost",
+    "sec-5": "your",
+    "sec-6": "brand",
+
+    // Tarjetas de Servicios
+    "card1-title": "Digital Branding",
+    "card1-sub": "Digital Positioning",
+    "card1-desc": "Visual and conceptual strategy designed to place the brand in the consumer's preferred mindset.",
+    "card2-title": "Visual Identity",
+    "card2-sub": "Graphic Personality",
+    "card2-desc": "Aesthetic and intentional universe created to project the unique character of the business and its target audience.",
+    "card3-title": "Corporate Graphic Design",
+    "card3-sub": "Institutional Communication",
+    "card3-desc": "Printed and digital materials and elements that convey the solidity, values, and professionalism of your company.",
+    "card4-title": "Advertising Design",
+    "card4-sub": "Impact & Conversion",
+    "card4-desc": "High-impact visual campaigns aimed at capturing your audience's attention and maximizing sales or conversions.",
+    "card5-title": "Audiovisual Content",
+    "card5-sub": "Production & Editing",
+    "card5-desc": "Dynamic video editing, animations, and multimedia pieces tailored to connect emotionally with your audience.",
+    "card6-title": "Social Media Design",
+    "card6-sub": "Presence & Impactful Feeds",
+    "card6-desc": "Creation of templates, posts, stories, and layouts optimized to stand out on Instagram, LinkedIn, Facebook, and TikTok.",
+    "btn-saber": "Learn more",
+
+    // Modales de Servicios (Traducción al Inglés)
+    "modalBtnCta": "I want my project ↗",
+
+    // Modal 1: Branding Digital
+    "modal1Badge": "Strategy & Brand",
+    "modal1Title": "Digital Branding",
+    "modal1Sub": "Strategic conceptual and visual positioning.",
+    "modal1Tag1": "Strategy",
+    "modal1Tag2": "Identity",
+    "modal1Tag3": "Positioning",
+    "modal1Desc": "Design and management of memorable brands: logo, visual universe, and differentiating value proposition.",
+
+    // Modal 2: Identidad Visual
+    "modal2Badge": "Brand Design",
+    "modal2Title": "Visual Identity",
+    "modal2Sub": "Aesthetic and intentional universe for unique brands.",
+    "modal2Tag1": "Logo Design",
+    "modal2Tag2": "Visual System",
+    "modal2Tag3": "Palette & Typography",
+    "modal2Desc": "Creation of cohesive graphic systems: typographic palette, brand elements, and aesthetic guidelines for lasting impact.",
+
+    // Modal 3: Diseño Gráfico Corporativo
+    "modal3Badge": "Corporate",
+    "modal3Title": "Corporate Graphic Design",
+    "modal3Sub": "Solid graphic structure for your company's institutional image.",
+    "modal3Tag1": "Business Cards",
+    "modal3Tag2": "Brochures",
+    "modal3Tag3": "Stationery",
+    "modal3Desc": "We create executive presentations, catalogs, professional stationery, and corporate reports with high-level design.",
+
+    // Modal 4: Diseño Publicitario
+    "modal4Badge": "Advertising",
+    "modal4Title": "Advertising Design",
+    "modal4Sub": "Creativity focused on capturing clients and boosting campaigns.",
+    "modal4Tag1": "Banners",
+    "modal4Tag2": "Posters",
+    "modal4Tag3": "Campaigns",
+    "modal4Desc": "Development of attractive advertising pieces for digital platforms and print media that generate immediate action.",
+
+    // Modal 5: Contenido Audiovisual
+    "modal5Badge": "Audiovisual",
+    "modal5Title": "Audiovisual Content",
+    "modal5Sub": "Professional video editing and animation to highlight your brand.",
+    "modal5Tag1": "Reels/Shorts",
+    "modal5Tag2": "Editing",
+    "modal5Tag3": "Motion Graphics",
+    "modal5Desc": "Production and post-production of promotional videos, simple animations, and clips optimized for video platforms.",
+
+    // Modal 6: Diseño para Redes
+    "modal6Badge": "Social Media",
+    "modal6Title": "Social Media Design",
+    "modal6Sub": "Aesthetic strategy for trend-setting social media.",
+    "modal6Tag1": "Instagram",
+    "modal6Tag2": "Templates",
+    "modal6Tag3": "Stories",
+    "modal6Desc": "Design of harmonious feeds, covers, educational carousels, and creative stories ready to publish.",
+
+    // CTA
+    "cta-1": "Ready",
+    "cta-2": "for",
+    "cta-3": "the",
+    "cta-4": "evolution?",
+    "btn-inicia": "START YOUR PROJECT",
+
+    // Footer
+    "footer-desc": "Visual design agency, branding, and digital identities focused on empowering brands.",
+    "footer-copy": "© 2026 Helping. All rights reserved.",
+    "footer-nav-title": "Navigation",
+    "footer-legal-title": "Legal",
+    "footer-privacy": "Privacy Policy",
+    "footer-connect-title": "Connect",
+
+    // Chatbot FAQ Translations
+    "faq_welcome": "Hello! 👋 Welcome to Helping. How can we help you today? Select a question:",
+    "faq_q1": "What services do you offer?",
+    "faq_q2": "How do I request a quote?",
+    "faq_q3": "What are the project delivery times?",
+    "faq_q4": "Talk to a direct advisor"
+  }
+};
+
+      let currentLang = localStorage.getItem('helping_lang') || 'es';
+      const langBtn = document.getElementById("lang-toggle");
+      const langText = document.getElementById("lang-text");
+
+      function updateLanguageUI(lang) {
+        if (langText) {
+          langText.textContent = translations[lang].langBtn;
+        }
+
+        document.querySelectorAll("[data-i18n]").forEach(element => {
+          const key = element.getAttribute("data-i18n");
+          if (translations[lang] && translations[lang][key]) {
+            element.textContent = translations[lang][key];
+          }
+        });
+
+        localStorage.setItem('helping_lang', lang);
+      }
+
+      // Ejecución inicial
+      updateLanguageUI(currentLang);
+
+      if (langBtn) {
+        langBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          currentLang = currentLang === "es" ? "en" : "es";
+          updateLanguageUI(currentLang);
+        });
+      }
+
+      /* CONTROL DE MODALES DE SERVICIOS */
+      const openButtons = document.querySelectorAll('.btn-case-study');
+      const closeButtons = document.querySelectorAll('.modal-close');
+      const modals = document.querySelectorAll('.modal-overlay');
+
+      openButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+          e.preventDefault();
+          const modalId = button.getAttribute('data-modal');
+          const targetModal = document.getElementById(modalId);
+          if (targetModal) {
+            targetModal.classList.add('active');
+          }
+        });
+      });
+
+      closeButtons.forEach(closeBtn => {
+        closeBtn.addEventListener('click', () => {
+          const modal = closeBtn.closest('.modal-overlay');
+          if (modal) {
+            modal.classList.remove('active');
+          }
+        });
+      });
+
+      modals.forEach(modal => {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) {
+            modal.classList.remove('active');
+          }
+        });
+      });
+
+      /* OBSERVADOR ANIMACIÓN SCROLL (ZOOM) */
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          }
+        });
+      }, { threshold: 0.15 });
+
+      document.querySelectorAll('.zoom-element').forEach((el) => observer.observe(el));
+
+    });
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    if (navToggle && navMenu) {
+      navToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navToggle.classList.toggle('open');
+        navMenu.classList.toggle('active');
+      });
+
+      const links = navMenu.querySelectorAll('a');
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          navToggle.classList.remove('open');
+          navMenu.classList.remove('active');
+        });
+      });
+    }
+  });
+
+
+
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+  const chatTrigger = document.getElementById("faq-chat-trigger");
+  const chatWindow = document.getElementById("faq-chat-window");
+  const chatClose = document.getElementById("faq-chat-close");
+  const messagesContainer = document.getElementById("faq-messages");
+  const optionBtns = document.querySelectorAll(".faq-option-btn");
+
+  if (chatTrigger && chatWindow) {
+    chatTrigger.addEventListener("click", () => {
+      chatWindow.classList.toggle("hidden");
+    });
+  }
+
+  if (chatClose && chatWindow) {
+    chatClose.addEventListener("click", () => {
+      chatWindow.classList.add("hidden");
+    });
+  }
+
+  const faqResponses = {
+    servicios: {
+      es: "En Helping ofrecemos Branding e Identidad Visual, Motion Graphics, Edición de Video Profesional, Producción Audiovisual e Identidad Digital.",
+      en: "At Helping we offer Branding & Visual Identity, Motion Graphics, Professional Video Editing, Audiovisual Production, and Digital Identity."
+    },
+    cotización: {
+      es: "Puedes solicitar una propuesta directamente en nuestra sección de Contacto o escribirnos vía WhatsApp al +57 3152289258 o en somoshelping@gmail.com para atención inmediata.",
+      en: "You can request a proposal directly in our Contact section or message us on WhatsApp at +57 3152289258 or in somoshelping@gmail.com for immediate response."
+    },
+    tiempos: {
+      es: "El tiempo estándar varía de 3 a 10 días hábiles dependiendo de la complejidad del proyecto (animaciones, diseño de marca o edición).",
+      en: "Standard delivery time ranges from 3 to 10 business days depending on project complexity (animations, branding, or editing)."
+    },
+    whatsapp: {
+      es: "¡Excelente! Te redirigimos al WhatsApp oficial de Helping...",
+      en: "Great! Redirecting you to Helping's official WhatsApp..."
+    }
+  };
+
+  optionBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const type = btn.getAttribute("data-faq");
+      const currentLang = localStorage.getItem('helping_lang') || 'es';
+      const userText = btn.textContent;
+
+      appendMessage(userText, "user-msg");
+
+      setTimeout(() => {
+        const responseText = faqResponses[type][currentLang];
+        appendMessage(responseText, "bot-msg");
+
+        if (type === "whatsapp") {
+          setTimeout(() => {
+            window.open("https://wa.me/573152289258?text=Hola%20Helping,%20tengo%20una%20consulta.", "_blank");
+          }, 1000);
+        }
+      }, 500);
+    });
+  });
+
+  function appendMessage(text, className) {
+    const msgDiv = document.createElement("div");
+    msgDiv.classList.add("chat-msg", className);
+    msgDiv.textContent = text;
+    messagesContainer.appendChild(msgDiv);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+  }
+});
+
+<!-- === FIN: JAVASCRIPT CHATBOX FAQ === -->
+
+
+
+
+
+
+
+  </script>
+  <!-- === TERMINA: SCRIPTS JAVASCRIPT === -->
+
+</body>
+</html>
