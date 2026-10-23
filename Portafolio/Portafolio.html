@@ -60,6 +60,48 @@
 <!-- === FIN: BOTÓN FLOTANTE DE WHATSAPP === -->
 
 
+<!-- ============================================
+      INICIO: CHATBOT DE PREGUNTAS FRECUENTES (FAQ)
+    ============================================ -->
+<!-- BOTÓN FLOTANTE PARA ABRIR CHAT -->
+<button id="faq-chat-trigger" class="faq-chat-btn" aria-label="Abrir Preguntas Frecuentes">
+   <span class="faq-chat-icon">💬</span>
+   <span class="faq-chat-badge">1</span>
+</button>
+
+<!-- VENTANA FLOTANTE DEL CHATBOT -->
+<div id="faq-chat-window" class="faq-chat-container hidden">
+  <!-- ENCABEZADO DEL CHAT -->
+   <div class="faq-chat-header">
+  <div class="faq-chat-avatar">
+   <img src="./Foto perfil.jpeg" alt="Helping Bot">
+  </div>
+   <div class="faq-chat-info">
+   <h4>Helping Assistant</h4>
+  <span class="faq-status-online">● En línea</span>
+  </div>
+   <button id="faq-chat-close" class="faq-close-btn" aria-label="Cerrar chat">&times;</button>
+</div>
+
+<!-- CUERPO DE MENSAJES -->
+ <div class="faq-chat-body" id="faq-messages">
+   <!-- Mensaje de bienvenida inicial -->
+ <div class="chat-msg bot-msg">
+ <p data-i18n="faq_welcome">¡Hola! 👋 Bienvenido a Helping. ¿En qué podemos ayudarte hoy? Selecciona una pregunta:</p>
+ </div>
+ </div>
+
+<!-- OPCIONES DE PREGUNTAS RÁPIDAS -->
+<div class="faq-chat-options" id="faq-options">
+<button class="faq-option-btn" data-faq="servicios" data-i18n="faq_q1">¿Qué servicios ofrecen?</button>
+<button class="faq-option-btn" data-faq="cotización" data-i18n="faq_q2">¿Cómo solicito una cotización?</button>
+<button class="faq-option-btn" data-faq="tiempos" data-i18n="faq_q3">¿Tiempos de entrega de un proyecto?</button>
+<button class="faq-option-btn" data-faq="whatsapp" data-i18n="faq_q4">Hablar con un asesor directo</button>
+</div>
+</div>
+<!-- === FIN: CHATBOT DE PREGUNTAS FRECUENTES (FAQ) === -->
+
+
 
   
 </header>
@@ -652,7 +694,7 @@
 
     // Chatbot FAQ Translations
     "faq_welcome": "¡Hola! 👋 Bienvenido a Helping. ¿En qué podemos ayudarte hoy? Selecciona una pregunta:",
-    "faq_q1": "¿Qué servicios ofrecen?",
+    "faq_q1": "¿Cuál es el método de pago de la inversión?",
     "faq_q2": "¿Cómo solicito una cotización?",
     "faq_q3": "¿Tiempos de entrega de un proyecto?",
     "faq_q4": "Hablar con un asesor directo"
@@ -762,7 +804,7 @@
 
     // Chatbot FAQ Translations
     "faq_welcome": "Hello! 👋 Welcome to Helping. How can we help you today? Select a question:",
-    "faq_q1": "What services do you offer?",
+    "faq_q1": "What is the investment payment method?",
     "faq_q2": "How do I request a quote?",
     "faq_q3": "What are the project delivery times?",
     "faq_q4": "Talk to a direct advisor"
@@ -902,8 +944,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const faqResponses = {
     servicios: {
-      es: "En Helping ofrecemos Branding e Identidad Visual, Motion Graphics, Edición de Video Profesional, Producción Audiovisual e Identidad Digital.",
-      en: "At Helping we offer Branding & Visual Identity, Motion Graphics, Professional Video Editing, Audiovisual Production, and Digital Identity."
+      es: "Para garantizar el compromiso y dar inicio formal a cualquier servicio o desarrollo en Helping, trabajamos con un esquema de pago fraccionado: se solicita un 50% de anticipo al aprobar la propuesta o cotización, y el restante 50% se abona únicamente al finalizar y aprobar el proyecto a entera satisfacción.",
+      en: "To guarantee commitment and formally begin any service or development at Helping, we work with a split payment scheme: a 50% advance deposit is required upon approving the proposal or quote, and the remaining 50% is paid only upon completion and final approval of the project."
     },
     cotización: {
       es: "Puedes solicitar una propuesta directamente en nuestra sección de Contacto o escribirnos vía WhatsApp al +57 3152289258 para atención inmediata.",

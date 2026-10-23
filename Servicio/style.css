@@ -906,6 +906,142 @@ a {
 
 
 /* ==========================================================================
+   INICIO: SECCIÓN PROCESO DE TRABAJO (ESTILO UNIFICADO)
+   ========================================================================== */
+
+.proceso-seccion {
+  max-width: 1200px;
+  margin: 80px auto 100px auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.proceso-titulo {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text-white, #ffffff);
+  margin-bottom: 40px;
+  letter-spacing: -0.5px;
+}
+
+.proceso-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.proceso-card {
+  width: 270px; /* Ancho optimizado para 4 columnas simétricas */
+  background-color: var(--card-bg, #12181c);
+  border-radius: 16px;
+  border: 1px solid #282828;
+  color: var(--text-white, #ffffff);
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proceso-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent-cyan, #00f0ff);
+  box-shadow: 0 20px 35px rgba(0, 229, 255, 0.2);
+}
+
+.proceso-paso {
+  background: rgba(0, 240, 255, 0.12);
+  color: var(--accent-cyan, #00f0ff);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+  width: fit-content;
+}
+
+.proceso-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text-white, #ffffff);
+  letter-spacing: -0.3px;
+}
+
+.proceso-card p {
+  font-size: 0.9rem;
+  color: #b0b0b0;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Ajuste Responsivo para Tablets y Móviles */
+@media (max-width: 1100px) {
+  .proceso-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .proceso-card {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   ANIMACIÓN FLOTANTE CONTINUA PARA LAS CARDS
+   ========================================================================== */
+
+/* 1. Definición del movimiento de flotación constante */
+@keyframes floatCards {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px); /* Sube 8 píxeles suavemente */
+  }
+  100% {
+    transform: translateY(0px);  /* Regresa a su posición original */
+  }
+}
+
+/* 2. Aplicación de la animación a las tarjetas de proceso */
+.proceso-card {
+  animation: floatCards 3s ease-in-out infinite;
+}
+
+/* 3. Desfase individual (opcional) para que no se muevan todas al mismo tiempo */
+.proceso-card:nth-child(1) {
+  animation-delay: 0s;
+}
+.proceso-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.proceso-card:nth-child(3) {
+  animation-delay: 0.8s;
+}
+.proceso-card:nth-child(4) {
+  animation-delay: 1.2s;
+}
+
+/* 4. Pausar la flotación y mantener el efecto hover cuando el usuario ponga el cursor encima */
+.proceso-card:hover {
+  animation-play-state: paused;
+  transform: translateY(-12px); /* Se eleva un poco más al hacer hover */
+  border-color: var(--accent-cyan, #00f0ff);
+  box-shadow: 0 20px 35px rgba(0, 229, 255, 0.2);
+}
+/* ==========================================================================
+   FIN: SECCIÓN PROCESO DE TRABAJO
+   ========================================================================== */
+
+/* ==========================================================================
    INICIO: CTA SECTION
    ========================================================================== */
 .cta-section {

@@ -65,6 +65,49 @@
 
 
 
+<!-- ============================================
+      INICIO: CHATBOT DE PREGUNTAS FRECUENTES (FAQ)
+    ============================================ -->
+<!-- BOTÓN FLOTANTE PARA ABRIR CHAT -->
+<button id="faq-chat-trigger" class="faq-chat-btn" aria-label="Abrir Preguntas Frecuentes">
+   <span class="faq-chat-icon">💬</span>
+   <span class="faq-chat-badge">1</span>
+</button>
+
+<!-- VENTANA FLOTANTE DEL CHATBOT -->
+<div id="faq-chat-window" class="faq-chat-container hidden">
+  <!-- ENCABEZADO DEL CHAT -->
+   <div class="faq-chat-header">
+  <div class="faq-chat-avatar">
+   <img src="./Foto perfil.jpeg" alt="Helping Bot">
+  </div>
+   <div class="faq-chat-info">
+   <h4>Helping Assistant</h4>
+  <span class="faq-status-online">● En línea</span>
+  </div>
+   <button id="faq-chat-close" class="faq-close-btn" aria-label="Cerrar chat">&times;</button>
+</div>
+
+<!-- CUERPO DE MENSAJES -->
+ <div class="faq-chat-body" id="faq-messages">
+   <!-- Mensaje de bienvenida inicial -->
+ <div class="chat-msg bot-msg">
+ <p data-i18n="faq_welcome">¡Hola! 👋 Bienvenido a Helping. ¿En qué podemos ayudarte hoy? Selecciona una pregunta:</p>
+ </div>
+ </div>
+
+<!-- OPCIONES DE PREGUNTAS RÁPIDAS -->
+<div class="faq-chat-options" id="faq-options">
+<button class="faq-option-btn" data-faq="servicios" data-i18n="faq_q1">¿Qué servicios ofrecen?</button>
+<button class="faq-option-btn" data-faq="cotización" data-i18n="faq_q2">¿Cómo solicito una cotización?</button>
+<button class="faq-option-btn" data-faq="tiempos" data-i18n="faq_q3">¿Tiempos de entrega de un proyecto?</button>
+<button class="faq-option-btn" data-faq="whatsapp" data-i18n="faq_q4">Hablar con un asesor directo</button>
+</div>
+</div>
+<!-- === FIN: CHATBOT DE PREGUNTAS FRECUENTES (FAQ) === -->
+
+
+
 
 
   <!-- === FIN: HEADER / NAVBAR === -->
@@ -271,9 +314,9 @@
   <div class="projects-header">
     <div>
       <h2>
-        <span>Portafolio</span> <span class="neon-text">& Manual Corporativo</span>
+        <span data-i18n="portafolioTitle1">Portafolio</span> <span class="neon-text" data-i18n="portafolioTitle2">& Manual Corporativo</span>
       </h2>
-      <p class="hero-text" style="margin-top: 0.5rem; font-size: 0.95rem;">
+      <p class="hero-text" style="margin-top: 0.5rem; font-size: 0.95rem;" data-i18n="portafolioHeroDesc">
         Conoce a detalle nuestros servicios y los lineamientos de nuestra identidad visual. Haz clic para abrirlos en una nueva ventana.
       </p>
     </div>
@@ -286,16 +329,16 @@
       <div class="card-body">
         <div class="client-header">
           <div class="client-info">
-            <h3>Portafolio de Servicios</h3>
-            <p>Soluciones Integrales</p>
+            <h3 data-i18n="cardServiciosTitle">Portafolio de Servicios</h3>
+            <p data-i18n="cardServiciosSubtitle">Soluciones Integrales</p>
           </div>
         </div>
-        <p class="description">
+        <p class="description" data-i18n="cardServiciosDesc">
           Explora la gama completa de servicios de diseño, desarrollo y producción audiovisual que ofrecemos para llevar tu marca al siguiente nivel.
         </p>
 
         <!-- BOTÓN CON ENLACE EN NUEVA VENTANA -->
-        <a href="../Portafolio.pdf" target="_blank" rel="noopener noreferrer" class="btn-external">
+        <a href="../Portafolio.pdf" target="_blank" rel="noopener noreferrer" class="btn-external" data-i18n="btnVerPortafolio">
           Ver Portafolio ↗
         </a>
       </div>
@@ -306,16 +349,16 @@
       <div class="card-body">
         <div class="client-header">
           <div class="client-info">
-            <h3>Manual Corporativo</h3>
-            <p>Identidad y Normas</p>
+            <h3 data-i18n="cardManualTitle">Manual Corporativo</h3>
+            <p data-i18n="cardManualSubtitle">Identidad y Normas</p>
           </div>
         </div>
-        <p class="description">
+        <p class="description" data-i18n="cardManualDesc">
           Conoce el manual de identidad de marca, uso de logotipo, paleta de colores corporativos y normativas gráficas oficiales de Helping.
         </p>
 
-        <!-- BOTÓN CON ENLACE EN NUEVA VENTANA (Reemplaza # por la ruta a tu PDF o documento) -->
-        <a href="../Manual de indentidad visual helping .pdf" target="_blank" rel="noopener noreferrer" class="btn-external">
+        <!-- BOTÓN CON ENLACE EN NUEVA VENTANA -->
+        <a href="../Manual de indentidad visual helping .pdf" target="_blank" rel="noopener noreferrer" class="btn-external" data-i18n="btnVerManual">
           Ver Manual Corporativo ↗
         </a>
       </div>
@@ -470,10 +513,21 @@
         
         // Chatbot FAQ Translations
         faq_welcome: "¡Hola! 👋 Bienvenido a Helping. ¿En qué podemos ayudarte hoy? Selecciona una pregunta:",
-        faq_q1: "¿Qué servicios ofrecen?",
+        faq_q1: "¿Cuál es el método de pago de la inversión?",
         faq_q2: "¿Cómo solicito una cotización?",
         faq_q3: "¿Tiempos de entrega de un proyecto?",
-        faq_q4: "Hablar con un asesor directo"
+        faq_q4: "Hablar con un asesor directo",
+        portafolioTitle1: "Portafolio",
+    portafolioTitle2: "& Manual Corporativo",
+    portafolioHeroDesc: "Conoce a detalle nuestros servicios y los lineamientos de nuestra identidad visual. Haz clic para abrirlos en una nueva ventana.",
+    cardServiciosTitle: "Portafolio de Servicios",
+    cardServiciosSubtitle: "Soluciones Integrales",
+    cardServiciosDesc: "Explora la gama completa de servicios de diseño, desarrollo y producción audiovisual que ofrecemos para llevar tu marca al siguiente nivel.",
+    btnVerPortafolio: "Ver Portafolio ↗",
+    cardManualTitle: "Manual Corporativo",
+    cardManualSubtitle: "Identidad y Normas",
+    cardManualDesc: "Conoce el manual de identidad de marca, uso de logotipo, paleta de colores corporativos y normativas gráficas oficiales de Helping.",
+    btnVerManual: "Ver Manual Corporativo ↗"
       },
       en: {
         langBtn: "ES",
@@ -525,10 +579,21 @@
 
         // Chatbot FAQ Translations
         faq_welcome: "Hello! 👋 Welcome to Helping. How can we help you today? Select a question:",
-        faq_q1: "What services do you offer?",
+        faq_q1: "What is the investment payment method?",
         faq_q2: "How do I request a quote?",
         faq_q3: "What are the project delivery times?",
-        faq_q4: "Talk to a direct advisor"
+        faq_q4: "Talk to a direct advisor",
+        portafolioTitle1: "Portfolio",
+    portafolioTitle2: "& Corporate Manual",
+    portafolioHeroDesc: "Get to know our services and visual identity guidelines in detail. Click to open them in a new window.",
+    cardServiciosTitle: "Services Portfolio",
+    cardServiciosSubtitle: "Comprehensive Solutions",
+    cardServiciosDesc: "Explore the full range of design, development, and audiovisual production services we offer to take your brand to the next level.",
+    btnVerPortafolio: "View Portfolio ↗",
+    cardManualTitle: "Corporate Manual",
+    cardManualSubtitle: "Identity & Standards",
+    cardManualDesc: "Discover Helping's brand identity manual, logo usage guidelines, corporate color palette, and official graphic standards.",
+    btnVerManual: "View Corporate Manual ↗"
       }
     };
 
@@ -585,8 +650,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const faqResponses = {
     servicios: {
-      es: "En Helping ofrecemos Branding e Identidad Visual, Motion Graphics, Edición de Video Profesional, Producción Audiovisual e Identidad Digital.",
-      en: "At Helping we offer Branding & Visual Identity, Motion Graphics, Professional Video Editing, Audiovisual Production, and Digital Identity."
+      es: "Para garantizar el compromiso y dar inicio formal a cualquier servicio o desarrollo en Helping, trabajamos con un esquema de pago fraccionado: se solicita un 50% de anticipo al aprobar la propuesta o cotización, y el restante 50% se abona únicamente al finalizar y aprobar el proyecto a entera satisfacción.",
+      en: "To guarantee commitment and formally begin any service or development at Helping, we work with a split payment scheme: a 50% advance deposit is required upon approving the proposal or quote, and the remaining 50% is paid only upon completion and final approval of the project."
     },
     cotización: {
       es: "Puedes solicitar una propuesta directamente en nuestra sección de Contacto o escribirnos vía WhatsApp al +57 3152289258 o en somoshelping@gmail.com para atención inmediata.",

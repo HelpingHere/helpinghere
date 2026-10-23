@@ -66,6 +66,49 @@
 
 
 
+<!-- ============================================
+      INICIO: CHATBOT DE PREGUNTAS FRECUENTES (FAQ)
+    ============================================ -->
+<!-- BOTÓN FLOTANTE PARA ABRIR CHAT -->
+<button id="faq-chat-trigger" class="faq-chat-btn" aria-label="Abrir Preguntas Frecuentes">
+   <span class="faq-chat-icon">💬</span>
+   <span class="faq-chat-badge">1</span>
+</button>
+
+<!-- VENTANA FLOTANTE DEL CHATBOT -->
+<div id="faq-chat-window" class="faq-chat-container hidden">
+  <!-- ENCABEZADO DEL CHAT -->
+   <div class="faq-chat-header">
+  <div class="faq-chat-avatar">
+   <img src="./Foto perfil.jpeg" alt="Helping Bot">
+  </div>
+   <div class="faq-chat-info">
+   <h4>Helping Assistant</h4>
+  <span class="faq-status-online">● En línea</span>
+  </div>
+   <button id="faq-chat-close" class="faq-close-btn" aria-label="Cerrar chat">&times;</button>
+</div>
+
+<!-- CUERPO DE MENSAJES -->
+ <div class="faq-chat-body" id="faq-messages">
+   <!-- Mensaje de bienvenida inicial -->
+ <div class="chat-msg bot-msg">
+ <p data-i18n="faq_welcome">¡Hola! 👋 Bienvenido a Helping. ¿En qué podemos ayudarte hoy? Selecciona una pregunta:</p>
+ </div>
+ </div>
+
+<!-- OPCIONES DE PREGUNTAS RÁPIDAS -->
+<div class="faq-chat-options" id="faq-options">
+<button class="faq-option-btn" data-faq="servicios" data-i18n="faq_q1">¿Qué servicios ofrecen?</button>
+<button class="faq-option-btn" data-faq="cotización" data-i18n="faq_q2">¿Cómo solicito una cotización?</button>
+<button class="faq-option-btn" data-faq="tiempos" data-i18n="faq_q3">¿Tiempos de entrega de un proyecto?</button>
+<button class="faq-option-btn" data-faq="whatsapp" data-i18n="faq_q4">Hablar con un asesor directo</button>
+</div>
+</div>
+<!-- === FIN: CHATBOT DE PREGUNTAS FRECUENTES (FAQ) === -->
+
+
+
 
 
 
@@ -185,62 +228,6 @@
   </div>
 </div>
 
-<!-- ============================================
-     PREGUNTAS FRECUENTES (FAQ ACORDEÓN)
-     ============================================ -->
-<section class="faq-section">
-  <div class="faq-container">
-    <h2 class="faq-title" data-i18n="faq_title">Preguntas Frecuentes</h2>
-    
-    <div class="faq-accordion">
-      
-      <!-- Pregunta 1 -->
-      <div class="faq-item">
-        <button class="faq-question">
-          <span data-i18n="faq_q1">¿Cuál es el método de pago y el porcentaje de anticipo para iniciar un proyecto?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
-          <p data-i18n="faq_a1">Para garantizar el compromiso y dar inicio formal a cualquier servicio o desarrollo en Helping, trabajamos con un esquema de pago fraccionado: se solicita un <strong>50% de anticipo</strong> al aprobar la propuesta o cotización, y el restante 50% se abona únicamente al finalizar y aprobar el proyecto a entera satisfacción.</p>
-        </div>
-      </div>
-
-      <!-- Pregunta 2 -->
-      <div class="faq-item">
-        <button class="faq-question">
-          <span data-i18n="faq_q2">¿Cómo solicito una cotización para un proyecto?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
-          <p data-i18n="faq_a2">Puedes completar nuestro formulario de contacto en esta misma página o escribirnos directamente por WhatsApp para una atención rápida e inmediata.</p>
-        </div>
-      </div>
-
-      <!-- Pregunta 3 -->
-      <div class="faq-item">
-        <button class="faq-question">
-          <span data-i18n="faq_q3">¿Cuáles son los tiempos de entrega promedio?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
-          <p data-i18n="faq_a3">El tiempo estándar varía de 3 a 10 días hábiles dependiendo de la complejidad de la pieza audiovisual, animación o diseño de marca.</p>
-        </div>
-      </div>
-
-      <!-- Pregunta 4 -->
-      <div class="faq-item">
-        <button class="faq-question">
-          <span data-i18n="faq_q4">¿Cómo es el proceso de trabajo tras la contratación?</span>
-          <span class="faq-icon">+</span>
-        </button>
-        <div class="faq-answer">
-          <p data-i18n="faq_a4">Iniciamos con una fase de briefing y conceptualización, luego pasamos a la producción/diseño con revisiones continuas hasta obtener la entrega final aprobada.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
 
 
 
@@ -345,7 +332,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // --- PREGUNTAS FRECUENTES (FAQ ACORDEÓN) ---
     faq_title: "Preguntas Frecuentes",
-    faq_q1: "¿Cuál es el método de pago y el porcentaje de anticipo para iniciar un proyecto?",
+    faq_q1: "¿Cuál es el método de pago de la inversión?",
     faq_a1: "Para garantizar el compromiso y dar inicio formal a cualquier servicio o desarrollo en Helping, trabajamos con un esquema de pago fraccionado: se solicita un <strong>50% de anticipo</strong> al aprobar la propuesta o cotización, y el restante 50% se abona únicamente al finalizar y aprobar el proyecto a entera satisfacción.",
     faq_q2: "¿Cómo solicito una cotización para un proyecto?",
     faq_a2: "Puedes completar nuestro formulario de contacto en esta misma página o escribirnos directamente por WhatsApp para una atención rápida e inmediata.",
@@ -395,7 +382,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // --- PREGUNTAS FRECUENTES (FAQ ACORDEÓN) ---
     faq_title: "Frequently Asked Questions",
-    faq_q1: "What is the payment method and advance percentage to start a project?",
+    faq_q1: "What is the investment payment method?",
     faq_a1: "To guarantee commitment and formally begin any service or development at Helping, we work with a split payment scheme: a <strong>50% advance deposit</strong> is required upon approving the proposal or quote, and the remaining 50% is paid only upon completion and final approval of the project.",
     faq_q2: "How do I request a quote for a project?",
     faq_a2: "You can complete our contact form on this same page or write to us directly via WhatsApp for quick and immediate assistance.",
@@ -652,6 +639,76 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const chatTrigger = document.getElementById("faq-chat-trigger");
+  const chatWindow = document.getElementById("faq-chat-window");
+  const chatClose = document.getElementById("faq-chat-close");
+  const messagesContainer = document.getElementById("faq-messages");
+  const optionBtns = document.querySelectorAll(".faq-option-btn");
+
+  if (chatTrigger && chatWindow) {
+    chatTrigger.addEventListener("click", () => {
+      chatWindow.classList.toggle("hidden");
+    });
+  }
+
+  if (chatClose && chatWindow) {
+    chatClose.addEventListener("click", () => {
+      chatWindow.classList.add("hidden");
+    });
+  }
+
+  const faqResponses = {
+    servicios: {
+      es: "Para garantizar el compromiso y dar inicio formal a cualquier servicio o desarrollo en Helping, trabajamos con un esquema de pago fraccionado: se solicita un 50% de anticipo al aprobar la propuesta o cotización, y el restante 50% se abona únicamente al finalizar y aprobar el proyecto a entera satisfacción.",
+      en: "To guarantee commitment and formally begin any service or development at Helping, we work with a split payment scheme: a 50% advance deposit is required upon approving the proposal or quote, and the remaining 50% is paid only upon completion and final approval of the project."
+    },
+    cotización: {
+      es: "Puedes solicitar una propuesta directamente en nuestra sección de Contacto o escribirnos vía WhatsApp al +57 3152289258 o en somoshelping@gmail.com para atención inmediata.",
+      en: "You can request a proposal directly in our Contact section or message us on WhatsApp at +57 3152289258 or in somoshelping@gmail.com for immediate response."
+    },
+    tiempos: {
+      es: "El tiempo estándar varía de 3 a 10 días hábiles dependiendo de la complejidad del proyecto (animaciones, diseño de marca o edición).",
+      en: "Standard delivery time ranges from 3 to 10 business days depending on project complexity (animations, branding, or editing)."
+    },
+    whatsapp: {
+      es: "¡Excelente! Te redirigimos al WhatsApp oficial de Helping...",
+      en: "Great! Redirecting you to Helping's official WhatsApp..."
+    }
+  };
+
+  optionBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const type = btn.getAttribute("data-faq");
+      const currentLang = localStorage.getItem('helping_lang') || 'es';
+      const userText = btn.textContent;
+
+      appendMessage(userText, "user-msg");
+
+      setTimeout(() => {
+        const responseText = faqResponses[type][currentLang];
+        appendMessage(responseText, "bot-msg");
+
+        if (type === "whatsapp") {
+          setTimeout(() => {
+            window.open("https://wa.me/573152289258?text=Hola%20Helping,%20tengo%20una%20consulta.", "_blank");
+          }, 1000);
+        }
+      }, 500);
+    });
+  });
+
+  function appendMessage(text, className) {
+    const msgDiv = document.createElement("div");
+    msgDiv.classList.add("chat-msg", className);
+    msgDiv.textContent = text;
+    messagesContainer.appendChild(msgDiv);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+  }
+});
+
+<!-- === FIN: JAVASCRIPT CHATBOX FAQ === -->
 
 
 

@@ -61,7 +61,46 @@
 <!-- === FIN: BOTÓN FLOTANTE DE WHATSAPP === -->
 
 
+<!-- ============================================
+      INICIO: CHATBOT DE PREGUNTAS FRECUENTES (FAQ)
+    ============================================ -->
+<!-- BOTÓN FLOTANTE PARA ABRIR CHAT -->
+<button id="faq-chat-trigger" class="faq-chat-btn" aria-label="Abrir Preguntas Frecuentes">
+   <span class="faq-chat-icon">💬</span>
+   <span class="faq-chat-badge">1</span>
+</button>
 
+<!-- VENTANA FLOTANTE DEL CHATBOT -->
+<div id="faq-chat-window" class="faq-chat-container hidden">
+  <!-- ENCABEZADO DEL CHAT -->
+   <div class="faq-chat-header">
+  <div class="faq-chat-avatar">
+   <img src="./Foto perfil.jpeg" alt="Helping Bot">
+  </div>
+   <div class="faq-chat-info">
+   <h4>Helping Assistant</h4>
+  <span class="faq-status-online">● En línea</span>
+  </div>
+   <button id="faq-chat-close" class="faq-close-btn" aria-label="Cerrar chat">&times;</button>
+</div>
+
+<!-- CUERPO DE MENSAJES -->
+ <div class="faq-chat-body" id="faq-messages">
+   <!-- Mensaje de bienvenida inicial -->
+ <div class="chat-msg bot-msg">
+ <p data-i18n="faq_welcome">¡Hola! 👋 Bienvenido a Helping. ¿En qué podemos ayudarte hoy? Selecciona una pregunta:</p>
+ </div>
+ </div>
+
+<!-- OPCIONES DE PREGUNTAS RÁPIDAS -->
+<div class="faq-chat-options" id="faq-options">
+<button class="faq-option-btn" data-faq="servicios" data-i18n="faq_q1">¿Qué servicios ofrecen?</button>
+<button class="faq-option-btn" data-faq="cotización" data-i18n="faq_q2">¿Cómo solicito una cotización?</button>
+<button class="faq-option-btn" data-faq="tiempos" data-i18n="faq_q3">¿Tiempos de entrega de un proyecto?</button>
+<button class="faq-option-btn" data-faq="whatsapp" data-i18n="faq_q4">Hablar con un asesor directo</button>
+</div>
+</div>
+<!-- === FIN: CHATBOT DE PREGUNTAS FRECUENTES (FAQ) === -->
 
 
 
@@ -383,6 +422,51 @@
     </div>
     <!-- === TERMINA: MODALES DE SERVICIOS === -->
 
+
+
+    <!-- INICIO: SECCIÓN PROCESO DE TRABAJO -->
+<section class="proceso-seccion">
+    <h2 class="proceso-titulo" data-i18n="procesoMainTitle">¿Cómo trabajamos?</h2>
+    
+    <div class="proceso-grid">
+        <!-- Paso 01 -->
+        <div class="proceso-card">
+            <span class="proceso-paso" data-i18n="paso1Num">Paso 01</span>
+            <h3 data-i18n="paso1Title">Inmersión y Briefing</h3>
+            <p data-i18n="paso1Desc">Análisis profundo de la marca, objetivos y necesidades del cliente.</p>
+        </div>
+
+        <!-- Paso 02 -->
+        <div class="proceso-card">
+            <span class="proceso-paso" data-i18n="paso2Num">Paso 02</span>
+            <h3 data-i18n="paso2Title">Conceptualización y Propuesta</h3>
+            <p data-i18n="paso2Desc">Creación de los primeros bocetos, rutas creativas y validación del concepto.</p>
+        </div>
+
+        <!-- Paso 03 -->
+        <div class="proceso-card">
+            <span class="proceso-paso" data-i18n="paso3Num">Paso 03</span>
+            <h3 data-i18n="paso3Title">Ejecución y Desarrollo</h3>
+            <p data-i18n="paso3Desc">Diseño de alta fidelidad, producción de piezas y refinamiento de detalles.</p>
+        </div>
+
+        <!-- Paso 04 -->
+        <div class="proceso-card">
+            <span class="proceso-paso" data-i18n="paso4Num">Paso 04</span>
+            <h3 data-i18n="paso4Title">Entrega y Optimización</h3>
+            <p data-i18n="paso4Desc">Lanzamiento oficial, entrega de manuales o archivos y seguimiento de impacto.</p>
+        </div>
+    </div>
+</section>
+<!-- FIN: SECCIÓN PROCESO DE TRABAJO -->
+
+
+
+
+
+
+
+
     <!-- INICIO: CTA SECTION -->
     <section class="cta-section">
       <h2>
@@ -587,10 +671,23 @@
 
     // Chatbot FAQ Translations
     "faq_welcome": "¡Hola! 👋 Bienvenido a Helping. ¿En qué podemos ayudarte hoy? Selecciona una pregunta:",
-    "faq_q1": "¿Qué servicios ofrecen?",
+    "faq_q1": "¿Cuál es el método de pago de la inversión?",
     "faq_q2": "¿Cómo solicito una cotización?",
     "faq_q3": "¿Tiempos de entrega de un proyecto?",
-    "faq_q4": "Hablar con un asesor directo"
+    "faq_q4": "Hablar con un asesor directo",
+    "procesoMainTitle": "¿Cómo trabajamos?",
+    "paso1Num": "Paso 01",
+    "paso1Title": "Inmersión y Briefing",
+    "paso1Desc": "Análisis profundo de la marca, objetivos y necesidades del cliente.",
+    "paso2Num": "Paso 02",
+    "paso2Title": "Conceptualización y Propuesta",
+    "paso2Desc": "Creación de los primeros bocetos, rutas creativas y validación del concepto.",
+    "paso3Num": "Paso 03",
+    "paso3Title": "Ejecución y Desarrollo",
+    "paso3Desc": "Diseño de alta fidelidad, producción de piezas y refinamiento de detalles.",
+    "paso4Num": "Paso 04",
+    "paso4Title": "Entrega y Optimización",
+    "paso4Desc": "Lanzamiento oficial, entrega de manuales o archivos y seguimiento de impacto."
   },
   en: {
     "nav-inicio": "HOME",
@@ -713,10 +810,23 @@
 
     // Chatbot FAQ Translations
     "faq_welcome": "Hello! 👋 Welcome to Helping. How can we help you today? Select a question:",
-    "faq_q1": "What services do you offer?",
+    "faq_q1": "What is the investment payment method?",
     "faq_q2": "How do I request a quote?",
     "faq_q3": "What are the project delivery times?",
-    "faq_q4": "Talk to a direct advisor"
+    "faq_q4": "Talk to a direct advisor",
+    "procesoMainTitle": "How do we work?",
+    "paso1Num": "Step 01",
+    "paso1Title": "Immersion & Briefing",
+    "paso1Desc": "Deep analysis of the brand, objectives, and client needs.",
+    "paso2Num": "Step 02",
+    "paso2Title": "Conceptualization & Proposal",
+    "paso2Desc": "Creation of initial sketches, creative paths, and concept validation.",
+    "paso3Num": "Step 03",
+    "paso3Title": "Execution & Development",
+    "paso3Desc": "High-fidelity design, asset production, and detail refinement.",
+    "paso4Num": "Step 04",
+    "paso4Title": "Delivery & Optimization",
+    "paso4Desc": "Official launch, delivery of manuals or files, and impact tracking."
   }
 };
 
@@ -843,8 +953,8 @@
 
   const faqResponses = {
     servicios: {
-      es: "En Helping ofrecemos Branding e Identidad Visual, Motion Graphics, Edición de Video Profesional, Producción Audiovisual e Identidad Digital.",
-      en: "At Helping we offer Branding & Visual Identity, Motion Graphics, Professional Video Editing, Audiovisual Production, and Digital Identity."
+      es: "Para garantizar el compromiso y dar inicio formal a cualquier servicio o desarrollo en Helping, trabajamos con un esquema de pago fraccionado: se solicita un 50% de anticipo al aprobar la propuesta o cotización, y el restante 50% se abona únicamente al finalizar y aprobar el proyecto a entera satisfacción.",
+      en: "To guarantee commitment and formally begin any service or development at Helping, we work with a split payment scheme: a 50% advance deposit is required upon approving the proposal or quote, and the remaining 50% is paid only upon completion and final approval of the project."
     },
     cotización: {
       es: "Puedes solicitar una propuesta directamente en nuestra sección de Contacto o escribirnos vía WhatsApp al +57 3152289258 o en somoshelping@gmail.com para atención inmediata.",
