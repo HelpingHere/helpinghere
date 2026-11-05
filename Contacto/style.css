@@ -280,7 +280,6 @@ a {
 }
 /* === FIN: ESTILOS BOTÓN FLOTANTE WHATSAPP === */
 
-
 /* ============================================
    INICIO: ESTILOS CHATBOT FAQ FLOTANTE
    ============================================ */
@@ -460,6 +459,46 @@ a {
   }
 }
 /* === FIN: ESTILOS CHATBOT FAQ FLOTANTE === */
+
+/* ============================================
+   INICIO: ANIMACIÓN FLOTANTE ABAJO HACIA ARRIBA
+   ============================================ */
+
+/* Definición de la animación de desplazamiento suave */
+@keyframes floatUp {
+  0% {
+    transform: translateY(12px);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(12px);
+    opacity: 0.8;
+  }
+}
+
+/* Aplicación de la animación al Botón de WhatsApp */
+.whatsapp-btn {
+  animation: floatUp 3s ease-in-out infinite;
+}
+
+/* Aplicación de la animación al Botón del Chatbox */
+.faq-chat-btn {
+  animation: floatUp 3s ease-in-out infinite;
+  animation-delay: 0.4s; /* Pequeño desfase para que se muevan en armonía */
+}
+
+/* Ajuste en HOVER para priorizar la interacción del usuario */
+.whatsapp-btn:hover,
+.faq-chat-btn:hover {
+  animation-play-state: paused;
+  transform: translateY(-8px) scale(1.1);
+}
+
+/* === FIN: ANIMACIÓN FLOTANTE ABAJO HACIA ARRIBA === */
 
 
 
